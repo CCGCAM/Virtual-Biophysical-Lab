@@ -4,453 +4,394 @@
   <meta charset="UTF-8">
   <title>Virtual Biophysical Lab</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description"
-        content="Virtual Biophysical Lab – a minimal experimental environment for biophysical and radiative transfer models in vegetation remote sensing.">
 
   <style>
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    :root{
+      --bg:#020617;--bg-card:#0b1220;--accent:#4af3ff;--accent-soft:#38bdf8;
+      --text-main:#e5e7eb;--text-muted:#9ca3af;--border-subtle:#1f2937;
+      --radius-xl:20px;--radius-pill:999px;--shadow-soft:0 20px 40px rgba(0,0,0,.45);
+      --maxw:1120px;
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{
+      background:radial-gradient(circle at top,#0f172a 0%,#020617 55%,#000);
+      color:var(--text-main);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      line-height:1.6;display:flex;justify-content:center;
+      padding:1.8rem 1.2rem 2.5rem;
+    }
+    main{width:100%;max-width:var(--maxw);}
+    a{color:var(--accent-soft);text-decoration:none}
+    a:hover{color:#f6c453}
+
+    .nav{
+      display:flex;justify-content:space-between;align-items:center;
+      margin-bottom:1.5rem;
+    }
+    .nav-title{font-weight:650;font-size:1.2rem;}
+    .nav-sub{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--text-muted);}
+    .nav-links{display:flex;flex-wrap:wrap;gap:1rem;font-size:.88rem;}
+    .nav-links a{color:var(--text-muted);}
+    .nav-links a:hover{color:var(--accent-soft);}
+    @media(max-width:800px){
+      .nav{flex-direction:column;align-items:flex-start;gap:.6rem;}
     }
 
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #f4f6fb;
-      color: #111827;
-      line-height: 1.6;
+    header{
+      background:linear-gradient(135deg,#020617 0%,#111827 50%,#020617 100%);
+      border-radius:var(--radius-xl);border:1px solid var(--border-subtle);
+      padding:1.1rem 1.3rem 1.2rem;box-shadow:var(--shadow-soft);
+      margin-bottom:2rem;
+    }
+    header h1{font-size:1.6rem;font-weight:650;margin-bottom:.4rem;}
+    header h1 span{color:var(--accent);}
+    .hero-text{font-size:.95rem;color:var(--text-muted);text-align:justify;text-justify:inter-word;}
+    .hero-tags{margin-top:.6rem;display:flex;flex-wrap:wrap;gap:.4rem;}
+    .tag-pill{
+      padding:.18rem .7rem;border-radius:var(--radius-pill);
+      border:1px solid rgba(148,163,184,.7);font-size:.72rem;
+      text-transform:uppercase;letter-spacing:.14em;color:var(--text-muted);
     }
 
-    a {
-      color: #0b63d1;
-      text-decoration: none;
+    section{margin-bottom:1.8rem;}
+    section h2{
+      font-size:1rem;text-transform:uppercase;letter-spacing:.18em;
+      color:var(--text-muted);margin-bottom:.35rem;
+    }
+    .section-title-strong{
+      font-size:1.25rem;font-weight:620;margin-bottom:.25rem;
+    }
+    .section-intro{
+      font-size:.94rem;color:var(--text-muted);
+      text-align:justify;text-justify:inter-word;margin-bottom:.8rem;
     }
 
-    a:hover {
-      text-decoration: underline;
+    .card-grid{
+      display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    }
+    .card{
+      background:var(--bg-card);border-radius:var(--radius-xl);
+      border:1px solid var(--border-subtle);box-shadow:var(--shadow-soft);
+      padding:1rem 1.1rem 1.2rem;
+    }
+    .card h3{font-size:1rem;margin-bottom:.3rem;}
+    .card p{
+      font-size:.9rem;color:var(--text-muted);
+      text-align:left;text-justify:inter-word;
+    }
+    .pill-mini{
+      display:inline-flex;align-items:center;padding:.18rem .6rem;
+      border-radius:var(--radius-pill);border:1px solid rgba(148,163,184,.7);
+      font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;
+      color:var(--text-muted);margin-bottom:.4rem;
     }
 
-    .page {
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 16px 20px 40px;
+    ul,ol{margin-left:1.1rem;font-size:.9rem;color:var(--text-muted);}
+    li{margin-bottom:.2rem;}
+
+    .status-badge{
+      display:inline-flex;align-items:center;gap:.4rem;
+      padding:.2rem .7rem;border-radius:var(--radius-pill);
+      background:#022c22;color:#bbf7d0;font-size:.78rem;
+      border:1px solid #064e3b;margin-bottom:.5rem;
+    }
+    .status-badge span:first-child{font-size:.9rem;}
+
+    pre{
+      margin-top:.6rem;background:#020617;border-radius:12px;
+      padding:.7rem .9rem;font-size:.78rem;color:#e5e7eb;
+      border:1px solid var(--border-subtle);overflow-x:auto;
+    }
+    code{
+      font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
     }
 
-    header {
-      background: linear-gradient(135deg, #0b63d1, #102a6b);
-      color: #ffffff;
-      border-radius: 18px;
-      padding: 28px 22px 32px;
-      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.35);
-      position: relative;
-      overflow: hidden;
-    }
-
-    header::after {
-      content: "";
-      position: absolute;
-      right: -80px;
-      top: -80px;
-      width: 200px;
-      height: 200px;
-      border-radius: 999px;
-      border: 3px solid rgba(255, 255, 255, 0.2);
-    }
-
-    .site-title {
-      font-size: 1.9rem;
-      font-weight: 700;
-      margin-bottom: 4px;
-    }
-
-    .site-subtitle {
-      font-size: 1rem;
-      opacity: 0.9;
-      margin-bottom: 16px;
-    }
-
-    .hero-text {
-      max-width: 640px;
-      font-size: 0.98rem;
-      opacity: 0.95;
-    }
-
-    .hero-actions {
-      margin-top: 18px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px 18px;
-      border-radius: 999px;
-      border: 1px solid transparent;
-      font-size: 0.95rem;
-      cursor: pointer;
-      font-weight: 500;
-      transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
-      text-decoration: none;
-    }
-
-    .btn-primary {
-      background: #ffffff;
-      color: #0b63d1;
-      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.35);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 12px 26px rgba(15, 23, 42, 0.4);
-    }
-
-    .btn-ghost {
-      border-color: rgba(255, 255, 255, 0.6);
-      color: #ffffff;
-      background: transparent;
-    }
-
-    .btn-ghost:hover {
-      background: rgba(15, 23, 42, 0.35);
-    }
-
-    nav {
-      margin-top: 14px;
-      font-size: 0.86rem;
-      opacity: 0.95;
-    }
-
-    nav a {
-      margin-right: 14px;
-      color: #e5edff;
-    }
-
-    main {
-      margin-top: 26px;
-    }
-
-    .section {
-      margin-top: 26px;
-      background: #ffffff;
-      border-radius: 16px;
-      padding: 18px 18px 20px;
-      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
-    }
-
-    .section h2 {
-      font-size: 1.2rem;
-      margin-bottom: 8px;
-      color: #111827;
-    }
-
-    .section h3 {
-      font-size: 0.95rem;
-      margin-bottom: 4px;
-      color: #111827;
-    }
-
-    .section p {
-      font-size: 0.95rem;
-      color: #374151;
-      margin-bottom: 8px;
-    }
-
-    .section small {
-      font-size: 0.8rem;
-      color: #6b7280;
-    }
-
-    .two-column {
-      display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-      gap: 18px;
-    }
-
-    ul {
-      margin-left: 16px;
-      margin-top: 6px;
-      font-size: 0.94rem;
-      color: #374151;
-    }
-
-    li {
-      margin-bottom: 4px;
-    }
-
-    .tag-pill {
-      display: inline-block;
-      padding: 3px 9px;
-      border-radius: 999px;
-      font-size: 0.78rem;
-      background: #e5efff;
-      color: #0b63d1;
-      margin: 2px 4px 2px 0;
-    }
-
-    .status-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.8rem;
-      padding: 3px 9px;
-      border-radius: 999px;
-      background: #ecfdf5;
-      color: #15803d;
-      margin-bottom: 6px;
-    }
-
-    code {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      font-size: 0.85rem;
-      background: #f3f4f6;
-      padding: 2px 5px;
-      border-radius: 4px;
-    }
-
-    pre {
-      margin-top: 10px;
-      background: #f3f4f6;
-      color: #111827;
-      padding: 10px 12px;
-      border-radius: 10px;
-      font-size: 0.82rem;
-      overflow-x: auto;
-      border: 1px solid #e5e7eb;
-    }
-
-    footer {
-      margin-top: 24px;
-      font-size: 0.8rem;
-      color: #6b7280;
-      text-align: center;
-    }
-
-    @media (max-width: 720px) {
-      header {
-        padding: 22px 18px 26px;
-      }
-
-      .site-title {
-        font-size: 1.6rem;
-      }
-
-      .two-column {
-        grid-template-columns: minmax(0, 1fr);
-      }
+    footer{
+      margin-top:1.2rem;font-size:.78rem;color:var(--text-muted);
+      text-align:center;
     }
   </style>
 </head>
 
 <body>
-  <div class="page">
-    <header>
-      <div class="site-title">Virtual Biophysical Lab</div>
-      <div class="site-subtitle">
-        A minimal experimental environment for biophysical and radiative transfer models
-        in vegetation remote sensing.
-      </div>
+<main>
 
-      <p class="hero-text">
-        This site accompanies the <strong>virtual-biophysical-lab</strong> repository.
-        It is designed as a sandbox to explore simple simulations, prototype tools and teaching
-        examples related to canopy reflectance, fluorescence and thermal signals.
-      </p>
+  <!-- TOP NAV -->
+  <nav class="nav">
+    <div>
+      <div class="nav-title">Virtual Biophysical Lab</div>
+      <div class="nav-sub">Sandbox · Biophysical &amp; RTM simulations</div>
+    </div>
+    <div class="nav-links">
+      <a href="#about">Overview</a>
+      <a href="#tools">ToolsRTM &amp; SCOPEinR</a>
+      <a href="#modules">Modules</a>
+      <a href="#examples">Use cases</a>
+      <a href="#getting-started">Getting started</a>
+      <a href="#status">Status</a>
+    </div>
+  </nav>
 
-      <div class="hero-actions">
-        <!-- TODO: replace # with your real GitLab repo URL -->
-        <a class="btn btn-primary" href="#" target="_blank" rel="noopener">
-          View repository
-        </a>
-        <a class="btn btn-ghost" href="#getting-started">
-          Get started
-        </a>
-      </div>
+  <!-- HERO -->
+  <header>
+    <h1>Virtual Biophysical Lab <span>· Vegetation Remote Sensing</span></h1>
+    <p class="hero-text">
+      A minimal experimental environment for testing biophysical models used in vegetation remote sensing.
+      The lab hosts small scripts, notebooks and figures that explore how leaf and canopy traits
+      control optical, fluorescence and thermal signals – without exposing personal information or
+      depending on a heavy web framework.
+    </p>
+    <div class="hero-tags">
+      <div class="tag-pill">Radiative Transfer Models</div>
+      <div class="tag-pill">Plant Traits</div>
+      <div class="tag-pill">Hyperspectral &amp; Thermal</div>
+      <div class="tag-pill">Teaching Sandbox</div>
+    </div>
+  </header>
 
-      <nav aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#tools">ToolsRTM &amp; SCOPEinR</a>
-        <a href="#modules">Modules</a>
-        <a href="#examples">Examples</a>
-        <a href="#getting-started">Getting started</a>
-        <a href="#status">Status</a>
-      </nav>
-    </header>
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>Section · Overview</h2>
+    <div class="section-title-strong">What is the Virtual Biophysical Lab?</div>
+    <p class="section-intro">
+      The <strong>Virtual Biophysical Lab</strong> is a small, self-contained space for experimenting with
+      biophysical models applied to vegetation monitoring. It is designed as a sandbox for quick tests:
+      simple scripts, synthetic datasets and toy examples that link canopy reflectance, SIF and
+      temperature to underlying biochemical and structural traits.
+    </p>
 
-    <main>
-      <section class="section" id="about">
-        <h2>About this lab</h2>
-        <div class="two-column">
-          <div>
-            <p>
-              The <strong>Virtual Biophysical Lab</strong> is a small, self-contained space for experimenting with
-              biophysical models used in vegetation remote sensing. It is intentionally minimal:
-              no heavy framework, no complex web app – just simple scripts, examples and notes.
-            </p>
-            <p>
-              The focus is on concepts such as radiative transfer, plant traits and scaling from leaf
-              to canopy and scene level. The lab can support both <strong>research prototyping</strong> and
-              <strong>teaching activities</strong> (e.g. short exercises, demos or workshops).
-            </p>
-          </div>
-          <div>
-            <p><small>Typical components you might host in this repo:</small></p>
-            <ul>
-              <li>Simple <strong>RTM runs</strong> (e.g. PROSAIL-style or SCOPE-style examples).</li>
-              <li>Synthetic datasets of <strong>reflectance</strong>, <strong>SIF</strong> or <strong>temperature</strong>.</li>
-              <li>Small R or Python notebooks exploring model parameters.</li>
-              <li>Figures and plots used in teaching slides or quick analyses.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- NEW SECTION: ToolsRTM & SCOPEinR -->
-      <section class="section" id="tools">
-        <h2>Simulation tools: ToolsRTM &amp; SCOPEinR</h2>
+    <div class="card-grid">
+      <article class="card">
+        <div class="pill-mini">Concept</div>
+        <h3>Sandbox, not a full framework</h3>
         <p>
-          The Virtual Biophysical Lab can be connected with existing radiative transfer toolboxes,
-          especially <strong>ToolsRTM</strong> and <strong>SCOPEinR</strong>, to generate realistic
-          simulations for teaching and research.
+          The lab is not a full processing chain. It is a lightweight place to try ideas before moving
+          them into larger tools or pipelines (e.g. project-specific repositories or operational code).
         </p>
+      </article>
 
-        <div class="two-column">
-          <div>
-            <h3>ToolsRTM</h3>
-            <p>
-              <strong>ToolsRTM</strong> is an R toolbox for simulating leaf and canopy reflectance using
-              several radiative transfer models (e.g. PROSPECT, PROSAIL, INFORM, fourSAIL).
-              It can be used to:
-            </p>
-            <ul>
-              <li>Generate lookup tables of spectra for different plant traits.</li>
-              <li>Explore sensitivity of reflectance to biochemical and structural parameters.</li>
-              <li>Resample simulated spectra to satellite or sensor band configurations.</li>
-            </ul>
-            <p>
-              <!-- TODO: replace with your real GitLab URL for ToolsRTM -->
-              Repository link: <a href="#" target="_blank" rel="noopener">ToolsRTM on GitLab</a>
-            </p>
-          </div>
-
-          <div>
-            <h3>SCOPEinR</h3>
-            <p>
-              <strong>SCOPEinR</strong> provides an R interface to SCOPE-style energy-balance and
-              fluorescence simulations. It can be used to:
-            </p>
-            <ul>
-              <li>Simulate canopy fluxes, temperature, reflectance and SIF.</li>
-              <li>Analyse responses to stress (e.g. changes in stomatal conductance).</li>
-              <li>Create small teaching examples linking SIF, GPP and thermal signals.</li>
-            </ul>
-            <p>
-              <!-- TODO: replace with your real GitLab URL for SCOPEinR -->
-              Repository link: <a href="#" target="_blank" rel="noopener">SCOPEinR on GitLab</a>
-            </p>
-          </div>
-        </div>
-
+      <article class="card">
+        <div class="pill-mini">Scope</div>
+        <h3>Leaf → canopy → scene</h3>
         <p>
-          Scripts in the Virtual Biophysical Lab can call these packages to produce
-          <em>ready-to-use</em> examples for notebooks, slides or student exercises.
+          Examples focus on radiative transfer, trait sensitivity and scaling. Scripts can simulate
+          reflectance, fluorescence and thermal signals for simple scenarios and compare them across
+          stress conditions.
         </p>
-      </section>
+      </article>
 
-      <section class="section" id="modules">
-        <h2>Modules and topics</h2>
+      <article class="card">
+        <div class="pill-mini">Teaching</div>
+        <h3>Support for exercises</h3>
         <p>
-          A possible organisation of folders/modules is:
+          The repository can host short exercises for students: parameter sweeps, index experiments,
+          quick plots for slides and small notebooks illustrating model behaviour.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- TOOLSRTM & SCOPEinR -->
+  <section id="tools">
+    <h2>Section · Simulation tools</h2>
+    <div class="section-title-strong">ToolsRTM &amp; SCOPEinR integrations</div>
+    <p class="section-intro">
+      The Virtual Biophysical Lab can be connected with existing R toolboxes for radiative transfer and
+      energy balance modelling. In particular, it is designed to work alongside
+      <strong>ToolsRTM</strong> and <strong>SCOPEinR</strong>, which provide forward simulations of canopy
+      spectra, fluxes and fluorescence.
+    </p>
+
+    <div class="card-grid">
+      <article class="card">
+        <div class="pill-mini">R toolbox</div>
+        <h3>ToolsRTM</h3>
+        <p>
+          <strong>ToolsRTM</strong> is an R toolbox for simulating leaf and canopy reflectance using
+          models such as PROSPECT, PROSAIL, INFORM and fourSAIL. Typical uses in this lab include:
         </p>
         <ul>
-          <li><code>rtm/</code> – basic radiative transfer model examples (leaf and canopy).</li>
-          <li><code>traits/</code> – simulations linking biochemical/structural traits to spectra.</li>
-          <li><code>time-series/</code> – toy models of diurnal or seasonal dynamics.</li>
-          <li><code>notebooks/</code> – R / Python notebooks for interactive exploration.</li>
-          <li><code>figures/</code> – plots and diagrams generated by the lab.</li>
-          <li><code>docs/</code> – notes for students or short explanations of exercises.</li>
+          <li>Generating lookup tables for different combinations of LAI, Cab, Cw, Cm, etc.</li>
+          <li>Exploring sensitivity of reflectance and vegetation indices to trait changes.</li>
+          <li>Resampling simulated spectra to satellite bands (Sentinel-2, PRISMA, EnMAP).</li>
         </ul>
-        <p>
-          <span class="tag-pill">Radiative transfer</span>
-          <span class="tag-pill">Plant traits</span>
-          <span class="tag-pill">Hyperspectral</span>
-          <span class="tag-pill">Thermal</span>
-          <span class="tag-pill">Teaching demos</span>
+        <p style="margin-top:.4rem;">
+          GitLab repository:
+          <br>
+          <a href="https://gitlab.com/caminoccg/toolsrtm" target="_blank" rel="noopener">
+            https://gitlab.com/caminoccg/toolsrtm
+          </a>
         </p>
-      </section>
+      </article>
 
-      <section class="section" id="examples">
-        <h2>Example use cases</h2>
-        <div class="two-column">
-          <div>
-            <h3>Teaching and exercises</h3>
-            <p>Use the lab as a companion to short tutorials on:</p>
-            <ul>
-              <li>How changing <em>LAI</em> or chlorophyll affects canopy reflectance.</li>
-              <li>Simple simulations of drought or stress effects on spectra.</li>
-              <li>Visualising synthetic vs. real satellite bands.</li>
-            </ul>
-          </div>
-          <div>
-            <h3>Research prototyping</h3>
-            <p>Keep lightweight notebooks and scripts to quickly test ideas, such as:</p>
-            <ul>
-              <li>Trying a new index or spectral feature.</li>
-              <li>Exploring parameter sensitivity in an RTM.</li>
-              <li>Generating small lookup tables for trait retrieval tests.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
+      <article class="card">
+        <div class="pill-mini">R interface</div>
+        <h3>SCOPEinR</h3>
+        <p>
+          <strong>SCOPEinR</strong> provides an R interface to SCOPE-style simulations, combining
+          radiative transfer, photosynthesis and energy balance. In the lab it can be used to:
+        </p>
+        <ul>
+          <li>Simulate canopy fluxes, temperature, reflectance and SIF for simple scenarios.</li>
+          <li>Compare stress vs. control cases (e.g. stomatal closure, drought, heat).</li>
+          <li>Generate synthetic diurnal cycles linked to flux tower products (GPP, LE).</li>
+        </ul>
+        <p style="margin-top:.4rem;">
+          GitLab repository:
+          <br>
+          <!-- TODO: sustituir # por la URL real de tu repo SCOPEinR en GitLab -->
+          <a href="#" target="_blank" rel="noopener">
+            SCOPEinR repository (GitLab, to be linked)
+          </a>
+        </p>
+      </article>
+    </div>
 
-      <section class="section" id="getting-started">
-        <h2>Getting started</h2>
-        <p>A minimal workflow for using this repository could be:</p>
-        <ol style="margin-left:16px; font-size:0.94rem; color:#374151;">
-          <li>Clone the repository or download it as a zip file.</li>
-          <li>Open the <code>notebooks/</code> or <code>rtm/</code> folders in your IDE of choice.</li>
-          <li>Run a simple script and modify a few parameters (e.g. LAI, Cab, soil brightness).</li>
-          <li>Plot the results and compare them across scenarios.</li>
-        </ol>
+    <p class="section-intro" style="margin-top:.8rem;">
+      Scripts and notebooks in the Virtual Biophysical Lab can call these packages directly, producing
+      ready-to-use figures and small datasets for analysis, documentation or teaching.
+    </p>
+  </section>
 
-        <pre><code># Example: clone (placeholder, adapt to your own URL)
+  <!-- MODULES -->
+  <section id="modules">
+    <h2>Section · Structure</h2>
+    <div class="section-title-strong">Suggested modules &amp; folders</div>
+    <p class="section-intro">
+      The exact layout of the repository is flexible. A simple organisation that works for both
+      prototyping and exercises is:
+    </p>
+
+    <div class="card-grid">
+      <article class="card">
+        <div class="pill-mini">RTM</div>
+        <h3><code>rtm/</code></h3>
+        <p>
+          Basic radiative transfer examples using ToolsRTM and SCOPEinR: single-run scripts,
+          parameter sweeps and small lookup table generators.
+        </p>
+      </article>
+      <article class="card">
+        <div class="pill-mini">Traits</div>
+        <h3><code>traits/</code></h3>
+        <p>
+          Scripts that link biochemical and structural traits to simulated spectra, indices or SIF,
+          including simple stress scenarios.
+        </p>
+      </article>
+      <article class="card">
+        <div class="pill-mini">Time series</div>
+        <h3><code>time-series/</code></h3>
+        <p>
+          Toy diurnal or seasonal simulations driven by changing radiation, soil moisture or
+          photosynthetic capacity.
+        </p>
+      </article>
+      <article class="card">
+        <div class="pill-mini">Notebooks</div>
+        <h3><code>notebooks/</code></h3>
+        <p>
+          R or Python notebooks used for exploration, teaching or quick checks of model behaviour.
+        </p>
+      </article>
+      <article class="card">
+        <div class="pill-mini">Figures</div>
+        <h3><code>figures/</code></h3>
+        <p>
+          Plots and diagrams generated by the lab that can later be reused in slides or papers.
+        </p>
+      </article>
+      <article class="card">
+        <div class="pill-mini">Docs</div>
+        <h3><code>docs/</code></h3>
+        <p>
+          Short notes for students, mini-tutorials and descriptions of example scripts or exercises.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- EXAMPLES -->
+  <section id="examples">
+    <h2>Section · Use cases</h2>
+    <div class="section-title-strong">What can you do in this lab?</div>
+    <p class="section-intro">
+      The Virtual Biophysical Lab is intentionally small, but it can support both teaching and research
+      prototyping. Some example activities include:
+    </p>
+
+    <div class="card-grid">
+      <article class="card">
+        <div class="pill-mini">Teaching</div>
+        <h3>Simple exercises</h3>
+        <p>
+          Use short scripts for exercises on LAI and chlorophyll effects, stress vs. control scenarios,
+          or comparison between simulated spectra and satellite bands.
+        </p>
+      </article>
+      <article class="card">
+        <div class="pill-mini">Prototyping</div>
+        <h3>Idea testing</h3>
+        <p>
+          Implement quick tests of new indices, sensitivity analyses or inversion strategies before they
+          are integrated in bigger project repositories or pipelines.
+        </p>
+      </article>
+      <article class="card">
+        <div class="pill-mini">Communication</div>
+        <h3>Figures &amp; mini-demos</h3>
+        <p>
+          Generate figures or tiny demos that illustrate model behaviour for presentations, meetings or
+          internal documentation.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- GETTING STARTED -->
+  <section id="getting-started">
+    <h2>Section · Setup</h2>
+    <div class="section-title-strong">Getting started with the repository</div>
+    <p class="section-intro">
+      A minimal workflow for using this repository could be:
+    </p>
+    <ol>
+      <li>Clone the repository or download it as a zip file.</li>
+      <li>Open the <code>notebooks/</code> or <code>rtm/</code> folders in your IDE of choice.</li>
+      <li>Run a simple script and modify a few parameters (e.g. LAI, Cab, soil brightness).</li>
+      <li>Plot the results and compare them across scenarios or stress levels.</li>
+    </ol>
+
+    <pre><code># Example: clone (placeholder, adapt to your own URL)
 git clone https://gitlab.com/your-group/virtual-biophysical-lab.git
 cd virtual-biophysical-lab</code></pre>
 
-        <p>
-          This website is a static page served via GitLab Pages and is intentionally simple.
-          You can extend it with more documentation or links when the lab grows.
-        </p>
-      </section>
+    <p class="section-intro" style="margin-top:.7rem;">
+      This website is a static page served via GitLab Pages. It is intentionally simple and can be
+      extended with more documentation, links or examples as the lab grows.
+    </p>
+  </section>
 
-      <section class="section" id="status">
-        <h2>Project status</h2>
-        <div class="status-badge">
-          <span>●</span> <span>Early prototype / sandbox</span>
-        </div>
-        <p>
-          The Virtual Biophysical Lab is currently in a <strong>prototype</strong> phase. The main goal is to provide:
-        </p>
-        <ul>
-          <li>A clean, low-friction space for trying ideas.</li>
-          <li>A simple place to host small examples for students or collaborators.</li>
-          <li>A starting point that can later be connected to more complete tools or packages.</li>
-        </ul>
-        <p>
-          You can safely adapt, reorganise or remove sections of this page according to your needs.
-        </p>
-      </section>
-    </main>
+  <!-- STATUS -->
+  <section id="status">
+    <h2>Section · Status</h2>
+    <div class="status-badge">
+      <span>●</span><span>Early prototype / sandbox</span>
+    </div>
+    <p class="section-intro">
+      The Virtual Biophysical Lab is in an early prototype phase. The goal is to provide a clean,
+      low-friction space to test ideas, host small examples for students and collaborators, and prepare
+      content that can later be migrated to more complete tools or project-specific repositories.
+    </p>
+  </section>
 
-    <footer>
-      &copy; <span id="year"></span> Virtual Biophysical Lab · Static site for experiments with biophysical models.
-    </footer>
-  </div>
+  <footer>
+    &copy; <span id="year"></span> Virtual Biophysical Lab · Static GitLab Pages site for biophysical model experiments.
+  </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+</main>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>

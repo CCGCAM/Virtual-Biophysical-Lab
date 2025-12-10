@@ -53,7 +53,7 @@ prototyping. Some example activities include:
 
   <p class="footer-text">
     Source repository:  
-    <a href="https://github.com/CCGCAM/Virtual-Biophysical-Lab" target="_blank" rel="noopener">
+    <a href="https://ccgcam.github.io/Virtual-Biophysical-Lab/" target="_blank" rel="noopener">
       github.com/CCGCAM/Virtual-Biophysical-Lab
     </a>
   </p>

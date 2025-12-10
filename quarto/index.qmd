@@ -77,7 +77,7 @@ temperature to underlying biochemical and structural traits.
 
   <p class="footer-text">
     Source repository:  
-    <a href="https://github.com/CCGCAM/Virtual-Biophysical-Lab" target="_blank" rel="noopener">
+    <a href="https://ccgcam.github.io/Virtual-Biophysical-Lab/" target="_blank" rel="noopener">
         Virtual Biophysical Lab
     </a>
   </p>

@@ -66,4 +66,21 @@ temperature to underlying biochemical and structural traits.
 
 </div>
 
+<footer class="vbl-footer">
+
+  <div class="footer-line"></div>
+
+  <p class="footer-text">
+    © 2025 Virtual Biophysical Lab · 
+    Minimal sandbox for biophysical model experiments.
+  </p>
+
+  <p class="footer-text">
+    Source repository:  
+    <a href="https://github.com/CCGCAM/Virtual-Biophysical-Lab" target="_blank" rel="noopener">
+      github.com/CCGCAM/Virtual-Biophysical-Lab
+    </a>
+  </p>
+
+</footer>
 </section>

@@ -26,3 +26,6 @@ format:
     css: styles.css
     toc: false
     page-layout: full
+    eval: false
+    code-copy: true     # shows the "Copy" button
+    code-overflow: wrap

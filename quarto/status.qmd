@@ -16,8 +16,22 @@ low-friction space to test ideas, host small examples for students and collabora
 content that can later be migrated to more complete tools or project-specific repositories.
 </p>
 
-<div class="footer">
-  © 2025 Virtual Biophysical Lab · Static GitHub Pages site for biophysical model experiments.
-</div>
+<footer class="vbl-footer">
+
+  <div class="footer-line"></div>
+
+  <p class="footer-text">
+    © 2025 Virtual Biophysical Lab · 
+    Minimal sandbox for biophysical model experiments.
+  </p>
+
+  <p class="footer-text">
+    Source repository:  
+    <a href="https://github.com/CCGCAM/Virtual-Biophysical-Lab" target="_blank" rel="noopener">
+      github.com/CCGCAM/Virtual-Biophysical-Lab
+    </a>
+  </p>
+
+</footer>
 
 </section>

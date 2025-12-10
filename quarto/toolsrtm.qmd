@@ -61,6 +61,33 @@ leaf and canopy reflectance, including soil and atmosphere components.
     <a href="https://gitlab.com/caminoccg/toolsrtm" target="_blank">ToolsRTM package</a>
   </p>
 </div>
+<br>
+<div class="vbl-card">
+  <div class="pill-mini">R · ToolsRTM</div>
+  <h3>Shiny application and LUT example</h3>
 
+  <p class="section-intro">
+  Example R code showing how to launch the RT simulators and generate a small PROSAIL LUT
+  using <code>ToolsRTM</code>.
+  </p>
+
+</div>
+<footer class="vbl-footer">
+
+  <div class="footer-line"></div>
+
+  <p class="footer-text">
+    © 2025 Virtual Biophysical Lab · 
+    Minimal sandbox for biophysical model experiments.
+  </p>
+
+  <p class="footer-text">
+    Source repository:  
+    <a href="https://github.com/CCGCAM/Virtual-Biophysical-Lab" target="_blank" rel="noopener">
+      github.com/CCGCAM/Virtual-Biophysical-Lab
+    </a>
+  </p>
+
+</footer>
 </section>
 

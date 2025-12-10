@@ -18,10 +18,26 @@ A minimal workflow for using this repository could be:
   <li>Plot the results and compare them across scenarios or stress levels.</li>
 </ol>
 
-<!-- IMPORTANT: blank line before the code block -->
-
 ```bash
 # Example: clone this repo
 git clone https://github.com/CCGCAM/Virtual-Biophysical-Group.git
 cd Virtual-Biophysical-Group
 ```
+<footer class="vbl-footer">
+
+  <div class="footer-line"></div>
+
+  <p class="footer-text">
+    © 2025 Virtual Biophysical Lab · 
+    Minimal sandbox for biophysical model experiments.
+  </p>
+
+  <p class="footer-text">
+    Source repository:  
+    <a href="https://github.com/CCGCAM/Virtual-Biophysical-Lab" target="_blank" rel="noopener">
+      github.com/CCGCAM/Virtual-Biophysical-Lab
+    </a>
+  </p>
+
+</footer>
+</section> 

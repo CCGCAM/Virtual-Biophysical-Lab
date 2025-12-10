@@ -1,0 +1,27 @@
+---
+title: "Getting started"
+---
+
+<section id="getting-started">
+
+<div class="section-label">Section · Setup</div>
+<div class="section-title-strong">Getting started with the repository</div>
+
+<p class="section-intro">
+A minimal workflow for using this repository could be:
+</p>
+
+<ol>
+  <li>Clone the repository or download it as a zip file.</li>
+  <li>Open the <code>notebooks/</code> or <code>rtm/</code> folders in your IDE of choice.</li>
+  <li>Run a simple script and modify a few parameters (e.g. LAI, Cab, soil brightness).</li>
+  <li>Plot the results and compare them across scenarios or stress levels.</li>
+</ol>
+
+<!-- IMPORTANT: blank line before the code block -->
+
+```bash
+# Example: clone this repo
+git clone https://github.com/CCGCAM/Virtual-Biophysical-Group.git
+cd Virtual-Biophysical-Group
+```

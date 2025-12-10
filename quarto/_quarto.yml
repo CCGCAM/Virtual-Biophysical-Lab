@@ -1,0 +1,28 @@
+project:
+  type: website
+  output-dir: ../docs-quarto
+website:
+  title: "Virtual Biophysical Lab"
+  navbar:
+    left:
+      - text: "Overview"
+        href: index.qmd
+      - text: "ToolsRTM"
+        href: toolsrtm.qmd
+      - text: "SCOPEinR"
+        href: scopeinr.qmd
+      - text: "Modules"
+        href: modules.qmd
+      - text: "Use cases"
+        href: use-cases.qmd
+      - text: "Getting started"
+        href: getting-started.qmd
+      - text: "Status"
+        href: status.qmd
+
+format:
+  html:
+    theme: default         # usamos tema base, pero lo sobreescribimos con CSS
+    css: styles.css
+    toc: false
+    page-layout: full

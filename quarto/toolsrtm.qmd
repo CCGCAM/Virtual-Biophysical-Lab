@@ -1,0 +1,66 @@
+---
+title: "ToolsRTM"
+---
+
+<section id="toolsrtm">
+
+<div class="section-label">Section · Simulation tool</div>
+<div class="section-title-strong">ToolsRTM</div>
+
+<p class="section-intro">
+The Virtual Biophysical Lab is designed to connect with existing R toolboxes for radiative transfer
+modelling. The <strong>ToolsRTM</strong> package provides a comprehensive suite of models for simulating
+leaf and canopy reflectance, including soil and atmosphere components.
+</p>
+
+<div class="vbl-card">
+  <div class="pill-mini">ToolsRTM</div>
+  <h3>Leaf &amp; canopy radiative transfer</h3>
+
+  <p>
+    <strong>ToolsRTM</strong> is an R package designed to perform detailed simulations of leaf and 
+    canopy reflectance using a wide suite of radiative transfer (RT) models. It operates across 
+    multiple satellite spectral configurations and enables high-fidelity analysis of vegetation 
+    biophysical and biochemical traits.
+  </p>
+
+  <p>
+    At the <em>canopy level</em>, ToolsRTM includes models such as <strong>INFORM</strong>, 
+    <strong>fourSAIL</strong>, and <strong>fourSAIL2</strong>, enabling the simulation of BRDF-sensitive 
+    canopy reflectance under variable structural and illumination conditions.
+  </p>
+
+  <p>
+    At the <em>leaf level</em>, the package integrates models such as <strong>PROSPECT</strong>, 
+    <strong>Liberty</strong>, and <strong>FLUSPECT (B–Cx)</strong>, enabling simulation of pigment content,
+    water, and dry matter effects on reflectance and transmittance.
+  </p>
+
+  <p>
+    ToolsRTM also incorporates the <strong>SPART</strong> model for TOA simulations, integrating:
+  </p>
+
+  <ul>
+    <li><strong>BSM</strong> – soil reflectance</li>
+    <li><strong>PROSAIL</strong> – canopy reflectance</li>
+    <li><strong>SMAC</strong> – atmospheric radiative transfer</li>
+  </ul>
+
+  <p>
+    The package includes the <strong>MARMIT</strong> model for bare-soil reflectance (400–2500 nm),
+    implemented via <code>get.marmit1</code> and <code>get.marmit2</code>.
+  </p>
+
+  <p>
+    ToolsRTM provides access to eight reference soil and vegetation databases 
+    used for model parameterisation and validation.
+  </p>
+
+  <p style="margin-top:.6rem;">
+    GitLab repository:<br>
+    <a href="https://gitlab.com/caminoccg/toolsrtm" target="_blank">ToolsRTM package</a>
+  </p>
+</div>
+
+</section>
+

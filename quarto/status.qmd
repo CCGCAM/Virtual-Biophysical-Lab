@@ -1,0 +1,23 @@
+---
+title: "Status"
+---
+
+<section id="status">
+
+<div class="section-label">Section · Status</div>
+
+<div class="status-badge">
+  <span>●</span><span>Early prototype / sandbox</span>
+</div>
+
+<p class="section-intro">
+The Virtual Biophysical Lab is in an early prototype phase. The goal is to provide a clean,
+low-friction space to test ideas, host small examples for students and collaborators, and prepare
+content that can later be migrated to more complete tools or project-specific repositories.
+</p>
+
+<div class="footer">
+  © 2025 Virtual Biophysical Lab · Static GitHub Pages site for biophysical model experiments.
+</div>
+
+</section>

@@ -1,0 +1,69 @@
+---
+title: "Virtual Biophysical Lab"
+---
+
+<div class="hero-card">
+
+<h1>Virtual Biophysical Lab <span>· Vegetation Remote Sensing</span></h1>
+
+<p class="hero-text">
+A minimal experimental environment for testing biophysical models used in vegetation
+remote sensing. The lab hosts small scripts, notebooks and figures that explore how
+leaf and canopy traits control optical, fluorescence and thermal signals – without
+exposing personal information or depending on a heavy web framework.
+</p>
+
+<div class="hero-tags">
+  <div class="tag-pill">Radiative Transfer Models</div>
+  <div class="tag-pill">Plant Traits</div>
+  <div class="tag-pill">Hyperspectral &amp; Thermal</div>
+  <div class="tag-pill">Teaching Sandbox</div>
+</div>
+
+</div>
+
+<section id="about">
+
+<div class="section-label">Section · Overview</div>
+<div class="section-title-strong">What is the Virtual Biophysical Lab?</div>
+
+<p class="section-intro">
+The <strong>Virtual Biophysical Lab</strong> is a small, self-contained space for experimenting with
+biophysical models applied to vegetation monitoring. It is designed as a sandbox for quick tests:
+simple scripts, synthetic datasets and toy examples that link canopy reflectance, SIF and
+temperature to underlying biochemical and structural traits.
+</p>
+
+<div class="card-grid">
+
+<div class="vbl-card">
+  <div class="pill-mini">Concept</div>
+  <h3>Sandbox, not a full framework</h3>
+  <p>
+    The lab is not a full processing chain. It is a lightweight place to try ideas before moving
+    them into larger tools or pipelines (e.g. project-specific repositories or operational code).
+  </p>
+</div>
+
+<div class="vbl-card">
+  <div class="pill-mini">Scope</div>
+  <h3>Leaf → canopy → scene</h3>
+  <p>
+    Examples focus on radiative transfer, trait sensitivity and scaling. Scripts can simulate
+    reflectance, fluorescence and thermal signals for simple scenarios and compare them across
+    stress conditions.
+  </p>
+</div>
+
+<div class="vbl-card">
+  <div class="pill-mini">Teaching</div>
+  <h3>Support for exercises</h3>
+  <p>
+    The repository can host short exercises for students: parameter sweeps, index experiments,
+    quick plots for slides and small notebooks illustrating model behaviour.
+  </p>
+</div>
+
+</div>
+
+</section>

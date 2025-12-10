@@ -1,0 +1,46 @@
+---
+title: "Use cases"
+---
+
+<section id="Use cases">
+
+<div class="section-label">Section · Use cases</div>
+<div class="section-title-strong">What can you do in this lab?</div>
+
+<p class="section-intro">
+The Virtual Biophysical Lab is intentionally small, but it can support both teaching and research
+prototyping. Some example activities include:
+</p>
+
+<div class="card-grid">
+
+<div class="vbl-card">
+  <div class="pill-mini">Teaching</div>
+  <h3>Simple exercises</h3>
+  <p>
+    Use short scripts for exercises on LAI and chlorophyll effects, stress vs. control scenarios,
+    or comparison between simulated spectra and satellite bands.
+  </p>
+</div>
+
+<div class="vbl-card">
+  <div class="pill-mini">Prototyping</div>
+  <h3>Idea testing</h3>
+  <p>
+    Implement quick tests of new indices, sensitivity analyses or inversion strategies before they
+    are integrated in bigger project repositories or pipelines.
+  </p>
+</div>
+
+<div class="vbl-card">
+  <div class="pill-mini">Communication</div>
+  <h3>Figures &amp; mini-demos</h3>
+  <p>
+    Generate figures or tiny demos that illustrate model behaviour for presentations, meetings or
+    internal documentation.
+  </p>
+</div>
+
+</div>
+
+</section>

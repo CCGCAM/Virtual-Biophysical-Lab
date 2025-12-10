@@ -79,7 +79,7 @@ prototyping and exercises is:
   <p class="footer-text">
     Source repository:  
     <a href="https://github.com/CCGCAM/Virtual-Biophysical-Lab" target="_blank" rel="noopener">
-      github.com/CCGCAM/Virtual-Biophysical-Lab
+         Virtual Biophysical Lab
     </a>
   </p>
 

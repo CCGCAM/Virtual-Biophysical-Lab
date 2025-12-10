@@ -202,48 +202,133 @@
     </p>
 
     <div class="card-grid">
-      <article class="card">
-        <div class="pill-mini">R toolbox</div>
-        <h3>ToolsRTM</h3>
-        <p>
-          <strong>ToolsRTM</strong> is an R toolbox for simulating leaf and canopy reflectance using
-          models such as PROSPECT, PROSAIL, INFORM and fourSAIL. Typical uses in this lab include:
-        </p>
-        <ul>
-          <li>Generating lookup tables for different combinations of LAI, Cab, Cw, Cm, etc.</li>
-          <li>Exploring sensitivity of reflectance and vegetation indices to trait changes.</li>
-          <li>Resampling simulated spectra to satellite bands (Sentinel-2, PRISMA, EnMAP).</li>
-        </ul>
-        <p style="margin-top:.4rem;">
-          GitLab repository:
-          <br>
-          <a href="https://gitlab.com/caminoccg/toolsrtm" target="_blank" rel="noopener">
-            https://gitlab.com/caminoccg/toolsrtm
-          </a>
-        </p>
-      </article>
+         <article class="card">
+  <div class="pill-mini">ToolsRTM</div>
+  <h3>ToolsRTM</h3>
 
-      <article class="card">
-        <div class="pill-mini">R interface</div>
-        <h3>SCOPEinR</h3>
-        <p>
-          <strong>SCOPEinR</strong> provides an R interface to SCOPE-style simulations, combining
-          radiative transfer, photosynthesis and energy balance. In the lab it can be used to:
-        </p>
-        <ul>
-          <li>Simulate canopy fluxes, temperature, reflectance and SIF for simple scenarios.</li>
-          <li>Compare stress vs. control cases (e.g. stomatal closure, drought, heat).</li>
-          <li>Generate synthetic diurnal cycles linked to flux tower products (GPP, LE).</li>
-        </ul>
-        <p style="margin-top:.4rem;">
-          GitLab repository:
-          <br>
-          <!-- TODO: sustituir # por la URL real de tu repo SCOPEinR en GitLab -->
-          <a href="https://gitlab.com/caminoccg/scopeinr" target="_blank" rel="noopener">
-            https://gitlab.com/caminoccg/scipeinr
-          </a>
-        </p>
-      </article>
+  <p>
+    <strong>ToolsRTM</strong> is an R package designed to perform detailed simulations of leaf and 
+    canopy reflectance using a wide suite of radiative transfer (RT) models. It operates across 
+    multiple satellite spectral configurations and enables high-fidelity analysis of vegetation 
+    biophysical and biochemical traits.
+  </p>
+
+  <p>
+    At the <em>canopy level</em>, ToolsRTM includes models such as <strong>INFORM</strong>, 
+    <strong>fourSAIL</strong>, and <strong>fourSAIL2</strong>, enabling the simulation of BRDF-sensitive 
+    canopy reflectance under variable structural and illumination conditions.
+  </p>
+
+  <p>
+    At the <em>leaf level</em>, the package integrates several established models: 
+    <strong>PROSPECT</strong> (D and PRO versions), <strong>Liberty</strong>, and 
+    <strong>FLUSPECT (B–Cx)</strong>, allowing users to simulate biochemical effects on reflectance 
+    and transmittance, including pigment composition, water content, and dry matter.
+  </p>
+
+  <p>
+    ToolsRTM also incorporates the <strong>SPART</strong> model (Soil–Plant–Atmosphere Radiative Transfer), 
+    a framework specifically developed to simulate top-of-atmosphere (TOA) directional reflectance across 
+    the solar spectrum. SPART couples three efficient RT components:
+  </p>
+
+  <ul>
+    <li><strong>BSM</strong> – a soil reflectance model;</li>
+    <li><strong>PROSAIL</strong> – vegetation canopy reflectance;</li>
+    <li><strong>SMAC</strong> – atmospheric correction / transmittance.</li>
+  </ul>
+
+  <p>
+    These modules are combined through the four-stream theory and the adding method, enabling realistic 
+    simulations that account for sun–sensor geometry, soil anisotropy, and non-Lambertian surface behaviour.
+  </p>
+
+  <p>
+    The package also integrates the <strong>MARMIT</strong> model (Multilayer rAdiative tRansfer Model of 
+    soIl reflecTance), which predicts bare-soil reflectance from 400–2500 nm at 1 nm resolution as a function 
+    of soil water content. MARMIT simulations can be executed via the <code>get.marmit1</code> and 
+    <code>get.marmit2</code> functions.
+  </p>
+
+  <p>
+    ToolsRTM provides links to eight reference soil and vegetation spectral databases 
+    (Bablet-2016, Dupiau-2020, Humper-2015, Lesaignoux-2008, Liu-2002, Lobell-2002, Marcq-2012, Philpot-2014), 
+    which support validation and parameterisation of the included models.
+  </p>
+
+  <p style="margin-top:.6rem;">
+    GitLab repository:  
+    <br>
+    <a href="https://gitlab.com/caminoccg/toolsrtm" target="_blank" rel="noopener">
+      https://gitlab.com/caminoccg/toolsrtm
+    </a>
+  </p>
+
+</article>
+
+
+  <article class="card">
+  <div class="pill-mini">SCOPEinR</div>
+  <h3>SCOPEinR</h3>
+
+  <p>
+    <strong>SCOPEinR</strong> is an R package designed to implement the 
+    <em>Soil Canopy Observation, Photochemistry and Energy Fluxes</em> (SCOPE) 
+    model, originally developed in MATLAB by Van der Tol et al. (2009) and extended 
+    by Yang et al. (2020). SCOPEinR enables users to simulate the interactions between 
+    radiation, vegetation canopies, soil, and the atmosphere within a single, 
+    coupled radiative transfer and energy balance framework.
+  </p>
+
+  <p>
+    The package powers the online <strong>RT-Simulator</strong>, offering a Shiny interface that allows 
+    users to simulate top-of-canopy (TOC) reflectance, canopy temperature, and 
+    chlorophyll fluorescence emissions under variable meteorological and structural 
+    conditions. This makes SCOPEinR particularly useful for studying vegetation stress, 
+    energy partitioning, and photochemical efficiency.
+  </p>
+
+  <p>
+    For full intercomparison with other radiative transfer (RT) models, SCOPEinR can be 
+    used together with the <strong>ToolsRTM</strong> package, enabling parallel simulations across 
+    different RT formulations (leaf-level, canopy-level, and RTM-based flux retrievals).
+  </p>
+
+  <p>
+    SCOPEinR can be used in the Virtual Biophysical Lab to:
+  </p>
+
+  <ul>
+    <li>Simulate canopy fluxes, temperature, TOC reflectance, fluorescence (SIF), and energy balance.</li>
+    <li>Compare environmental scenarios such as drought, heat stress, stomatal closure, or nutrient limitations.</li>
+    <li>Generate synthetic diurnal cycles for benchmarking against flux tower observations (e.g., GPP, LE, Rn).</li>
+    <li>Drive forward simulations for evaluating radiative transfer parameterizations and machine learning inversion pipelines.</li>
+  </ul>
+
+  <p>
+    The SCOPEinR and ToolsRTM packages have been integrated into an online 
+    <strong>RT-platform</strong> (<em>currently in testing</em>) that provides real-time simulations 
+    and visualizations through an interactive interface.
+  </p>
+
+  <p style="margin-top:.6rem;">
+    GitLab repositories:
+    <br>
+    <a href="https://gitlab.com/caminoccg/scopeinr" target="_blank" rel="noopener">
+      SCOPEinR package
+    </a>
+    <br>
+    <a href="https://gitlab.com/caminoccg/toolsrtm-simulator" target="_blank" rel="noopener">
+      Online RT-platform (Shiny RT-Simulator)
+    </a>
+  </p>
+
+  <p style="margin-top:.4rem; font-size:0.85rem; color:#9ca3af;">
+    <em>Note: These modules are currently in the testing phase before public release.</em>
+  </p>
+</article>
+  
+
     </div>
 
     <p class="section-intro" style="margin-top:.8rem;">

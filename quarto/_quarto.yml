@@ -19,6 +19,8 @@ website:
         href: getting-started.qmd
       - text: "Status"
         href: status.qmd
+      - text: "Conferences"
+        href: conferences.qmd
 
 format:
   html:

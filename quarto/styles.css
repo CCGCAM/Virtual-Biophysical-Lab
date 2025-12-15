@@ -10,6 +10,19 @@
   --radius-pill:999px;
   --shadow-soft:0 20px 40px rgba(0,0,0,.45);
   --maxw:1120px;
+    /* Core dark palette (already implicit in ToolsRTM) */
+  --vbl-bg-dark: #050b16;
+  --vbl-card-dark: #071526;
+  --vbl-card-dark-2: #091c33;
+
+  --vbl-blue: #2f81f7;        /* accent blue */
+  --vbl-blue-soft: #5aa2ff;
+
+  --vbl-text-main: #e5e7eb;   /* main text */
+  --vbl-text-muted: #9ca3af;  /* secondary text */
+
+  --vbl-border-dark: rgba(255,255,255,0.08);
+
 }
 
 body {
@@ -124,6 +137,22 @@ section{
 
 /* CARDS */
 
+/* Light touch: do NOT override body/main sizing like in the custom landing page */
+.vbl-footer-classic { margin-top: 2rem; }
+.vbl-footer-line{
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #4c5f7a, transparent);
+  margin: 1rem 0 1.25rem;
+}
+
+/* Optional: make card look closer to your dark style without breaking Quarto */
+.card{
+  background: rgba(11,18,32,.85);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+}
+.card .text-secondary{ opacity: 0.9; }
 .card-grid{
   display:grid;
   gap:1rem;
@@ -187,6 +216,83 @@ li{margin-bottom:.2rem}
 }
 
 .status-badge span:first-child{font-size:.9rem}
+
+
+
+
+/* Status page: conference card */
+.status-card{
+  background: linear-gradient(
+    180deg,
+    var(--vbl-card-dark),
+    var(--vbl-card-dark-2)
+  );
+
+  border-radius: 22px;
+  padding: 28px 30px;
+  border: 1px solid var(--vbl-border-dark);
+
+  box-shadow:
+    0 0 0 1px rgba(47,129,247,0.08),
+    0 25px 60px rgba(0,0,0,0.55);
+}
+
+
+.status-h2{
+  color: var(--vbl-text-main);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.status-lead{
+  color: var(--vbl-text-muted);
+  margin-bottom: 20px;
+}
+
+
+.status-list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.status-list li{
+  padding: 10px 0;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.status-list li:first-child{
+  border-top: none;
+}
+
+.status-item-title{
+  font-weight: 600;
+}
+
+.status-item-sep{
+  opacity: 0.55;
+  padding: 0 6px;
+}
+
+.status-item-meta{
+  opacity: 0.85;
+}
+
+.status-note{
+  margin-top: 18px;
+  padding: 14px 18px;
+  border-radius: 16px;
+
+  /* SAME color family as the card */
+  background: #5aa2ff;
+  border: 1px solid var(--vbl-border);
+
+  /* Accent line using SAME blue as titles */
+  border-left: 4px solid var(--vbl-blue);
+
+  color: #1f2937;
+  font-size: 0.95rem;
+}
 
 /* FOOTER */
 

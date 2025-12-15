@@ -72,22 +72,16 @@ leaf and canopy reflectance, including soil and atmosphere components.
   </p>
 
 </div>
-<footer class="vbl-footer">
 
-  <div class="footer-line"></div>
-
-  <p class="footer-text">
-    © 2025 Virtual Biophysical Lab · 
-    Minimal sandbox for biophysical model experiments.
-  </p>
-
-  <p class="footer-text">
-    Source repository:  
+  <div class="text-center small text-secondary vbl-footer-classic">
+  <div class="vbl-footer-line"></div>
+  <p class="mb-1">© 2025 Virtual Biophysical Lab · Minimal sandbox for biophysical model experiments.</p>
+  <p class="mb-0">
+    Source repository:
     <a href="https://ccgcam.github.io/Virtual-Biophysical-Lab/" target="_blank" rel="noopener">
-        Virtual Biophysical Lab
+      Virtual Biophysical Lab
     </a>
   </p>
-
-</footer>
+</div>
 </section>
 

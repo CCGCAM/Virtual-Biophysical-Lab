@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ToolsRTM – Virtual Biophysical Lab</title>
+<title>Conferences – Virtual Biophysical Lab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -94,7 +94,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Overview</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./toolsrtm.html" aria-current="page"> 
+    <a class="nav-link" href="./toolsrtm.html"> 
 <span class="menu-text">ToolsRTM</span></a>
   </li>  
   <li class="nav-item">
@@ -118,7 +118,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Status</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./conferences.html"> 
+    <a class="nav-link active" href="./conferences.html" aria-current="page"> 
 <span class="menu-text">Conferences</span></a>
   </li>  
 </ul>
@@ -138,7 +138,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">ToolsRTM</h1>
+<h1 class="title">Conferences</h1>
 </div>
 
 
@@ -155,67 +155,23 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="toolsrtm">
-<div class="section-label">
-Section · Simulation tool
-</div>
-<div class="section-title-strong">
-ToolsRTM
-</div>
-<p class="section-intro">
-The Virtual Biophysical Lab is designed to connect with existing R toolboxes for radiative transfer modelling. The <strong>ToolsRTM</strong> package provides a comprehensive suite of models for simulating leaf and canopy reflectance, including soil and atmosphere components.
-</p>
-<div class="vbl-card">
-<div class="pill-mini">
-ToolsRTM
-</div>
-<h3 class="anchored">
-Leaf &amp; canopy radiative transfer
-</h3>
-<p>
-<strong>ToolsRTM</strong> is an R package designed to perform detailed simulations of leaf and canopy reflectance using a wide suite of radiative transfer (RT) models. It operates across multiple satellite spectral configurations and enables high-fidelity analysis of vegetation biophysical and biochemical traits.
-</p>
-<p>
-At the <em>canopy level</em>, ToolsRTM includes models such as <strong>INFORM</strong>, <strong>fourSAIL</strong>, and <strong>fourSAIL2</strong>, enabling the simulation of BRDF-sensitive canopy reflectance under variable structural and illumination conditions.
-</p>
-<p>
-At the <em>leaf level</em>, the package integrates models such as <strong>PROSPECT</strong>, <strong>Liberty</strong>, and <strong>FLUSPECT (B–Cx)</strong>, enabling simulation of pigment content, water, and dry matter effects on reflectance and transmittance.
-</p>
-<p>
-ToolsRTM also incorporates the <strong>SPART</strong> model for TOA simulations, integrating:
-</p>
-<ul>
-<li>
-<strong>BSM</strong> – soil reflectance
+<p>The Virtual Biophysical Lab is presented and discussed at selected scientific meetings and mission-oriented workshops. These venues are used to share methodological advances, prototype tools, and reproducible examples related to radiative transfer modelling, imaging spectroscopy, and EO-based plant trait retrieval.</p>
+<section id="next-conferences" class="level2">
+<h2 class="anchored" data-anchor-id="next-conferences">Next Conferences</h2>
+<div class="card shadow-sm border-0">
+<div class="card-body">
+<ul class="list-unstyled mt-3 mb-0">
+<li class="py-2 border-top">
+<strong> <a href="https://flex-fluorescence-workshop-2026.esa.int/" target="_blank" rel="noopener"> FLEX-Fluorescence 2026 Workshop </a> </strong> · <span class="text-secondary">3–6 March 2026 · Bonn, Germany</span><br> <span class="text-secondary"> International ESA workshop focused on on latest developments in fluorescence remote sensing, and the lastest updated Fuorescence Explorer (FLEX) – Sentinel-3 tandem mission. </span>
 </li>
-<li>
-<strong>PROSAIL</strong> – canopy reflectance
+<li class="py-2 border-top">
+<strong> <a href="https://is.earsel.org/workshop/14-IS-Helsinki2026/" target="_blank" rel="noopener"> 14th EARSeL Workshop on Imaging Spectroscopy </a> </strong> · <span class="text-secondary">2–4 June 2026 · Helsinki, Finland</span><br> <span class="text-secondary"> International scientific workshop on imaging spectroscopy, covering methods, sensors, applications, and reproducible workflows. </span>
 </li>
-<li>
-<strong>SMAC</strong> – atmospheric radiative transfer
+<li class="py-2 border-top">
+<strong> <a href="https://nikal.eventsair.com/esa-digital-twin-earth-components-open-science-meeting-2026/" target="_blank" rel="noopener"> ESA Digital Twin Earth Components – Open Science Meeting 2026 </a> </strong> · <span class="text-secondary">2–5 February 2026 · ESA-ESRIN, Frascati, Italy</span><br> <span class="text-secondary"> ESA open science meeting dedicated to Digital Twin Earth components, mission-oriented methods, Cal/Val readiness, and multi-sensor integration. </span>
 </li>
 </ul>
-<p>
-The package includes the <strong>MARMIT</strong> model for bare-soil reflectance (400–2500 nm), implemented via <code>get.marmit1</code> and <code>get.marmit2</code>.
-</p>
-<p>
-ToolsRTM provides access to eight reference soil and vegetation databases used for model parameterisation and validation.
-</p>
-<p style="margin-top:.6rem;">
-GitLab repository:<br> <a href="https://gitlab.com/caminoccg/toolsrtm" target="_blank">ToolsRTM package</a>
-</p>
 </div>
-<br>
-<div class="vbl-card">
-<div class="pill-mini">
-R · ToolsRTM
-</div>
-<h3 class="anchored">
-Shiny application and LUT example
-</h3>
-<p class="section-intro">
-Example R code showing how to launch the RT simulators and generate a small PROSAIL LUT using <code>ToolsRTM</code>.
-</p>
 </div>
 <div class="text-center small text-secondary vbl-footer-classic">
 <div class="vbl-footer-line">
@@ -228,9 +184,9 @@ Example R code showing how to launch the RT simulators and generate a small PROS
 Source repository: <a href="https://ccgcam.github.io/Virtual-Biophysical-Lab/" target="_blank" rel="noopener"> Virtual Biophysical Lab </a>
 </p>
 </div>
+
+
 </section>
-
-
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

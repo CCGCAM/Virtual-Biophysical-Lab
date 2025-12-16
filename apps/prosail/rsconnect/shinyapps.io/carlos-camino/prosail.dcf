@@ -1,0 +1,12 @@
+name: prosail
+title: PROSAIL
+username: carlos-camino
+account: carlos-camino
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 16297788
+bundleId: 11310880
+url: https://carlos-camino.shinyapps.io/prosail/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE

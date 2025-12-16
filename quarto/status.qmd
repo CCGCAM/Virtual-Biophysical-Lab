@@ -1,8 +1,7 @@
 ---
 title: "Status"
+format: html
 ---
-
-<section id="status">
 
 <div class="section-label">Section · Status</div>
 
@@ -11,13 +10,19 @@ title: "Status"
 </div>
 
 <p class="section-intro">
-The Virtual Biophysical Lab is in an early prototype phase. The goal is to provide a clean,
-low-friction space to test ideas, host small examples for students and collaborators, and prepare
-content that can later be migrated to more complete tools or project-specific repositories.
+The Virtual Biophysical Lab is currently in an early prototype phase. Its primary objective is to
+provide a clean, low-friction environment for testing methodological ideas, hosting small and
+reproducible examples for students and collaborators, and preparing content that can later be
+migrated into more complete tools or project-specific repositories.
 </p>
 
+<p class="section-intro">
+At this stage, the emphasis is on clarity, reproducibility, and pedagogical value rather than on
+operational completeness. Interfaces, examples, and documentation may evolve rapidly as concepts
+are validated, refined, and consolidated.
+</p>
 
-  <div class="text-center small text-secondary vbl-footer-classic">
+<div class="text-center small text-secondary vbl-footer-classic">
   <div class="vbl-footer-line"></div>
   <p class="mb-1">© 2025 Virtual Biophysical Lab · Minimal sandbox for biophysical model experiments.</p>
   <p class="mb-0">
@@ -28,5 +33,3 @@ content that can later be migrated to more complete tools or project-specific re
   </p>
 </div>
 
-
-</section>

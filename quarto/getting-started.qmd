@@ -1,22 +1,35 @@
 ---
 title: "Getting started"
+format: html
 ---
-
-<section id="getting-started">
 
 <div class="section-label">Section · Setup</div>
 <div class="section-title-strong">Getting started with the repository</div>
 
 <p class="section-intro">
-A minimal workflow for using this repository could be:
+This section provides a minimal workflow to help you start using the Virtual Biophysical Lab
+repository for learning, teaching, or early-stage research prototyping.
 </p>
 
 <ol>
-  <li>Clone the repository or download it as a zip file.</li>
-  <li>Open the <code>notebooks/</code> or <code>rtm/</code> folders in your IDE of choice.</li>
-  <li>Run a simple script and modify a few parameters (e.g. LAI, Cab, soil brightness).</li>
-  <li>Plot the results and compare them across scenarios or stress levels.</li>
+  <li>
+    Clone the repository locally or download it as a ZIP archive.
+  </li>
+  <li>
+    Open the <code>notebooks/</code> or <code>rtm/</code> directories in your preferred IDE
+    (e.g. RStudio, VS Code).
+  </li>
+  <li>
+    Run one of the introductory scripts and modify key parameters such as LAI, chlorophyll
+    content (Cab), or soil brightness.
+  </li>
+  <li>
+    Visualise the outputs and compare results across scenarios, stress levels, or sensor
+    configurations.
+  </li>
 </ol>
+
+
 
 ```bash
 # Example: clone this repo

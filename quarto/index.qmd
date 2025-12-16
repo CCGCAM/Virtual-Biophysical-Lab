@@ -1,79 +1,88 @@
 ---
-title: "Virtual Biophysical Lab"
+title: "Overview"
+format:
+  html:
+    toc: false
+    embed-resources: true
+    include-after-body: _footer.html
 ---
 
 <div class="hero-card">
 
-<h1>Virtual Biophysical Lab <span>· Vegetation Remote Sensing</span></h1>
+# HYDRA-EO Tutorials <span>· Hybrid ML &amp; RTM for crop stress</span>
 
 <p class="hero-text">
-A minimal experimental environment for testing biophysical models used in vegetation
-remote sensing. The lab hosts small scripts, notebooks and figures that explore how
-leaf and canopy traits control optical, fluorescence and thermal signals – without
-exposing personal information or depending on a heavy web framework.
+This tutorial site provides lightweight examples, scripts and notebooks that illustrate the main
+concepts of the HYDRA-EO project: hybrid machine learning, radiative transfer modelling and
+multi-sensor Earth Observation for crop stress, pests and disease monitoring.
 </p>
 
 <div class="hero-tags">
-  <div class="tag-pill">Radiative Transfer Models</div>
-  <div class="tag-pill">Plant Traits</div>
-  <div class="tag-pill">Hyperspectral &amp; Thermal</div>
-  <div class="tag-pill">Teaching Sandbox</div>
+  <div class="tag-pill">Hybrid ML &amp; RTMs</div>
+  <div class="tag-pill">Crop stress &amp; pests</div>
+  <div class="tag-pill">Hyperspectral &amp; thermal</div>
+  <div class="tag-pill">ESA EXPRO+ project</div>
 </div>
 
 </div>
-
-<section id="about">
 
 <div class="section-label">Section · Overview</div>
-<div class="section-title-strong">What is the Virtual Biophysical Lab?</div>
 
-<p class="section-intro">
-The <strong>Virtual Biophysical Lab</strong> is a small, self-contained space for experimenting with
-biophysical models applied to vegetation monitoring. It is designed as a sandbox for quick tests:
-simple scripts, synthetic datasets and toy examples that link canopy reflectance, SIF and
-temperature to underlying biochemical and structural traits.
+## What are these tutorials?
+
+The HYDRA-EO tutorial platform mirrors the structure of the main HYDRA-EO project website, but in a lightweight scientific format.
+It provides a sandbox where users can interact with radiative transfer models, explore spectral simulations,
+test machine-learning workflows and understand how symptoms of crop stress emerge across spectral domains.
+
+::: {.card-grid}
+
+::: {.vbl-card}
+<div class="pill-mini">RTMs</div>
+
+### Radiative transfer simulations
+
+Hands-on examples using **ToolsRTM** (PROSAIL, INFORM, FLUSPECT, SPART, MARMIT)
+and **SCOPEinR** for coupled radiative transfer, energy balance and fluorescence.
+:::
+
+::: {.vbl-card}
+<div class="pill-mini">Hybrid ML</div>
+
+### Trait-based machine learning
+
+Practical workflows showing how synthetic RTM libraries can support supervised learning,
+stress differentiation and band/feature selection for ESA missions.
+:::
+
+::: {.vbl-card}
+<div class="pill-mini">EO</div>
+
+### Multi-sensor Earth Observation
+
+Use cases combining UAV hyperspectral, thermal, airborne HyPlant, and satellite data
+(Sentinel-2, PRISMA, EnMAP, FLEX-like SIF) to explore scaling from leaf to landscape.
+:::
+
+:::
+
+<div class="text-center small text-secondary vbl-footer-classic">
+
+<div class="vbl-footer-line"></div>
+
+<p class="mb-1">© 2026 HYDRA-EO.</p>
+
+<p class="mb-2">
+HYDRA-EO is funded by the European Space Agency (ESA) under the EXPRO+ Tender
+“Crop Multiple Stressors, Pests and Diseases”
 </p>
 
-<div class="card-grid">
+<p class="mb-3">Action 1-12684.</p>
 
-<div class="vbl-card">
-  <div class="pill-mini">Concept</div>
-  <h3>Sandbox, not a full framework</h3>
-  <p>
-    The lab is not a full processing chain. It is a lightweight place to try ideas before moving
-    them into larger tools or pipelines (e.g. project-specific repositories or operational code).
-  </p>
-</div>
-
-<div class="vbl-card">
-  <div class="pill-mini">Scope</div>
-  <h3>Leaf → canopy → scene</h3>
-  <p>
-    Examples focus on radiative transfer, trait sensitivity and scaling. Scripts can simulate
-    reflectance, fluorescence and thermal signals for simple scenarios and compare them across
-    stress conditions.
-  </p>
-</div>
-
-<div class="vbl-card">
-  <div class="pill-mini">Teaching</div>
-  <h3>Support for exercises</h3>
-  <p>
-    The repository can host short exercises for students: parameter sweeps, index experiments,
-    quick plots for slides and small notebooks illustrating model behaviour.
-  </p>
-</div>
+<p class="mb-4">
+Source repository:
+<a href="https://ccgcam.github.io/HydraEO/" target="_blank" rel="noopener">
+Hydra-EO pipeline
+</a>
+</p>
 
 </div>
-
-  <div class="text-center small text-secondary vbl-footer-classic">
-  <div class="vbl-footer-line"></div>
-  <p class="mb-1">© 2025 Virtual Biophysical Lab · Minimal sandbox for biophysical model experiments.</p>
-  <p class="mb-0">
-    Source repository:
-    <a href="https://ccgcam.github.io/Virtual-Biophysical-Lab/" target="_blank" rel="noopener">
-      Virtual Biophysical Lab
-    </a>
-  </p>
-</div>
-</section>

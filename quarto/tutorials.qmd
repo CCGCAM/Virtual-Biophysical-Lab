@@ -8,17 +8,17 @@ editor:
 
 ## Virtual Biophysical Lab
 
-This section provides the practical learning layer of the Virtual
-Biophysical Lab. It gathers structured tutorials that translate the
-scientific concepts, models, and workflows developed in HYDRA-EO into
-reproducible, hands-on examples.
+This section provides the practical learning layer of the **Virtual
+Biophysical Lab**. It gathers structured tutorials that translate the
+scientific concepts, models, and workflows developed in **HYDRA-EO**
+into reproducible, hands-on examples.
 
 The tutorials are organised by core modelling packages used within the
 project, primarily **ToolsRTM** and **SCOPEinR**, and are delivered as
-executable notebooks and scripted workflows that can be directly
-run, modified, and reused.
+executable notebooks and scripted workflows that can be directly run,
+modified, and reused.
 
----
+------------------------------------------------------------------------
 
 ## ToolsRTM package
 
@@ -30,37 +30,19 @@ models with Earth Observation data. Emphasis is placed on hybrid
 workflows that combine physically based models with machine-learning
 approaches.
 
-::: {.vbl-card}
-<ul class="list-unstyled mt-3 mb-0">
+::: vbl-card
+-   [**ToolsRTM tutorial notebook**](../notebooks/ToolsRTM.html)\
+    *Leaf and canopy radiative transfer simulations, spectral
+    sensitivity analysis, and hybrid RTM–ML workflows using the ToolsRTM
+    package.*
 
-<li class="py-2 border-top">
-<strong>
-<a href="../notebooks/ToolsRTM.html" target="_blank" rel="noopener">
-ToolsRTM tutorial notebook
-</a>
-</strong><br>
-<span class="text-secondary">
-Leaf and canopy radiative transfer simulations, spectral sensitivity
-analysis, and hybrid RTM–ML workflows using the ToolsRTM package.
-</span>
-</li>
-
-<li class="py-2 border-top">
-<strong>
-<a href="../notebooks/getting_satellite_using_stac.html" target="_blank" rel="noopener">
-Accessing satellite data using STAC
-</a>
-</strong><br>
-<span class="text-secondary">
-Practical tutorial on accessing and visualising EO satellite data using
-STAC APIs, designed to support downstream RTM-based analyses.
-</span>
-</li>
-
-</ul>
+-   [**Accessing satellite data using
+    STAC**](../notebooks/getting_satellite_using_stac.html)\
+    *Practical tutorial on accessing and visualising EO satellite data
+    using STAC APIs, designed to support downstream RTM-based analyses.*
 :::
 
----
+------------------------------------------------------------------------
 
 ## SCOPEinR package
 
@@ -70,141 +52,73 @@ demonstrate how SIF and thermal signals can be interpreted in relation
 to underlying physiological processes, and how model outputs can be
 validated against field measurements and flux-tower observations.
 
-::: {.vbl-card}
-<ul class="list-unstyled mt-3 mb-0">
-
-<li class="py-2 border-top">
-<strong>
-<a href="../notebooks/SCOPEinR.html" target="_blank" rel="noopener">
-SCOPEinR tutorial notebook
-</a>
-</strong><br>
-<span class="text-secondary">
-Simulation of coupled radiative transfer, energy balance, photosynthesis
-and fluorescence using the SCOPEinR framework.
-</span>
-</li>
-
-</ul>
+::: vbl-card
+-   [**SCOPEinR tutorial notebook**](../notebooks/SCOPEinR.html)\
+    *Simulation of coupled radiative transfer, energy balance,
+    photosynthesis and fluorescence using the SCOPEinR framework.*
 :::
 
----
+------------------------------------------------------------------------
 
 ## Script-based tutorials (R)
 
-These scripts provide reproducible, step-by-step examples that complement the
-notebook-based tutorials. They are organised by modelling framework and can be
-run independently or adapted for teaching and prototyping.
+These scripts provide reproducible, step-by-step examples that
+complement the notebook-based tutorials. They are organised by modelling
+framework and can be run independently or adapted for teaching and
+prototyping.
 
-::: {.vbl-card}
-<div class="pill-mini">R · ToolsRTM / PROSAIL</div>
-
-<h3>
-  <img src="../assets/logoR_white_1024.png" alt="R logo"
-       style="height:20px; vertical-align:middle; margin-right:6px;">
-  ToolsRTM &amp; PROSAIL scripts
-</h3>
-
-```{=html}
-<ul>
-  <li>
-    <strong>
-      <a href="../scripts/4-Sims-Inversion_PROSAIL.R" download>
-        Inversion with PROSAIL
-      </a>
-    </strong>
-    — PROSAIL forward simulations and inversion examples.
-  </li>
-
-  <li>
-    <strong>
-      <a href="../scripts/4-Sims-Inversion_PROSAIL_satellite.R" download>
-        Hybrid ML inversion with PROSAIL at Sentinel-2 and PRISMA
-      </a>
-    </strong>
-    — PROSAIL simulations adapted to satellite spectral configurations.
-  </li>
-</ul>
-
-```
-
-
-<p class="section-intro">
-These scripts demonstrate leaf–canopy radiative transfer simulations, LUT
-generation, and inversion strategies using the ToolsRTM framework, including
-satellite-oriented workflows.
-</p>
+::::: vbl-card
+::: pill-mini
+ R · ToolsRTM / PROSAIL
 :::
 
-<br>
+### ![](../assets/logoR_white_512.png){.r-logo} ToolsRTM & PROSAIL scripts
 
-::: {.vbl-card}
-<div class="pill-mini">R · SCOPEinR</div>
+[**Foward-Inversion approach**](../scripts/4-Sims-Inversion_PROSAIL.R)\ : Foward mode using PROSAIL and an inversion example
 
-<h3>
-  <img src="../assets/logoR_white_512.png" alt="R logo"
-       style="height:20px; vertical-align:middle; margin-right:6px;">
-  SCOPEinR scripts
-</h3>
+[**Hybrid ML inversion with PROSAIL at Sentinel-2 and PRISMA**](../scripts/4-Sims-Inversion_PROSAIL_satellite.R)\ :  PROSAIL simulations adapted to satellite spectral configurations.
 
+::: section-intro
+These scripts demonstrate leaf–canopy radiative transfer simulations,
+LUT generation, and inversion strategies using the ToolsRTM framework,
+including satellite-oriented workflows.
+:::
+:::::
 
-```{=html}
-<ul>
-  <li>
-    <strong>
-      <a href="../scripts/1-getSCOPE.R" download>
-        Run with getSCOPE
-      </a>
-    </strong>
-    — Run a basic SCOPE simulation and extract core outputs.
-  </li>
+------------------------------------------------------------------------
 
-  <li>
-    <strong>
-      <a href="../scripts/1-getSCOPE-v3_withChunck.R" download>
-        Run with getSCOPE using chunks
-      </a>
-    </strong>
-    — Chunk-based execution for large parameter spaces.
-  </li>
-
-  <li>
-    <strong>
-      <a href="../scripts/2-Explore_outputsSCOPE.R" download>
-        Explore outputs from SCOPEinR
-      </a>
-    </strong>
-    — Visualisation and interpretation of SCOPE outputs.
-  </li>
-
-  <li>
-    <strong>
-      <a href="../scripts/3-Inversion.R" download>
-        Hybrid ML approach using SCOPE LUT table
-      </a>
-    </strong>
-    — Simple inversion example using SCOPE simulations.
-  </li>
-</ul>
-
-```
-
-<p class="section-intro">
-These scripts focus on coupled energy balance, photosynthesis, temperature, and
-fluorescence simulations, and are well suited for understanding SCOPE dynamics
-before moving to hybrid or inversion workflows.
-</p>
+::::: vbl-card
+::: pill-mini
+R · SCOPEinR
 :::
 
----
+### ![](../assets/logoR_white_512.png){.r-logo} SCOPEinR scripts
 
-<div class="text-center small text-secondary vbl-footer-classic">
-  <div class="vbl-footer-line"></div>
-  <p class="mb-1">© 2025 Virtual Biophysical Lab · Minimal sandbox for biophysical model experiments.</p>
-  <p class="mb-0">
-    Source repository:
-    <a href="https://ccgcam.github.io/Virtual-Biophysical-Lab/" target="_blank" rel="noopener">
-      Virtual Biophysical Lab
-    </a>
-  </p>
-</div>
+[**Run with getSCOPE**](../scripts/1-getSCOPE.R)\ : Run a basic SCOPE simulation and extract core outputs.
+
+[**Run with getSCOPE using
+    chunks**](../scripts/1-getSCOPE-v3_withChunck.R)\
+    Chunk-based execution for large parameter spaces.
+
+[**Explore outputs from SCOPEinR**](../scripts/2-Explore_outputsSCOPE.R)\ : Visualisation and interpretation of SCOPE outputs.
+
+[**Hybrid ML approach using SCOPE LUT table**](../scripts/3-Inversion.R)\ :Simple inversion example using SCOPE simulations.
+
+::: section-intro
+These scripts focus on coupled energy balance, photosynthesis,
+temperature, and fluorescence simulations, and are well suited for
+understanding SCOPE dynamics before moving to hybrid or inversion
+workflows.
+:::
+:::::
+
+------------------------------------------------------------------------
+
+:::: {.text-center .small .text-secondary .vbl-footer-classic}
+::: vbl-footer-line
+:::
+
+© 2025 **Virtual Biophysical Lab** · Minimal sandbox for biophysical model
+experiments.  
+[Virtual Biophysical Lab](https://ccgcam.github.io/Virtual-Biophysical-Lab/)
+::::

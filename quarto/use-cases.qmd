@@ -3,56 +3,71 @@ title: "Use cases"
 format: html
 ---
 
-<div class="section-label">Section · Use cases</div>
-<div class="section-title-strong">What can you do in this lab?</div>
+::: {.section-label}
+Section · Use cases
+:::
 
-<p class="section-intro">
-The Virtual Biophysical Lab is intentionally compact, yet it supports both teaching-oriented
-activities and early-stage research prototyping. Typical use cases include:
-</p>
+::: {.section-title-strong}
+What can you do in this lab?
+:::
+
+::: {.section-intro}
+The Virtual Biophysical Lab is intentionally compact, yet it supports both
+teaching-oriented activities and early-stage research prototyping. Typical
+use cases include:
+:::
+
+---
 
 ::: {.card-grid}
 
 ::: {.vbl-card}
-<div class="pill-mini">Teaching</div>
+::: {.pill-mini}
+Teaching
+:::
 
 ### Simple exercises
 
-Short, self-contained scripts can be used for practical exercises on leaf and canopy properties
-(e.g. LAI and chlorophyll effects), stress versus control scenarios, or comparisons between
-simulated spectra and satellite sensor bands. These examples are well suited for MSc-level courses
-and introductory training.
+Short, self-contained scripts can be used for practical exercises on leaf and
+canopy properties (e.g. LAI and chlorophyll effects), stress versus control
+scenarios, or comparisons between simulated spectra and satellite sensor
+bands. These examples are well suited for MSc-level courses and introductory
+training.
 :::
 
 ::: {.vbl-card}
-<div class="pill-mini">Prototyping</div>
+::: {.pill-mini}
+Prototyping
+:::
 
 ### Idea testing
 
-The lab provides a lightweight environment to rapidly test new vegetation indices, perform
-sensitivity analyses, or explore alternative inversion strategies before integrating them into
-larger project repositories or operational processing pipelines.
+The lab provides a lightweight environment to rapidly test new vegetation
+indices, perform sensitivity analyses, or explore alternative inversion
+strategies before integrating them into larger project repositories or
+operational processing pipelines.
 :::
 
 ::: {.vbl-card}
-<div class="pill-mini">Communication</div>
+::: {.pill-mini}
+Communication
+:::
 
-### Figures &amp; mini-demos
+### Figures & mini-demos
 
-Users can generate figures or small interactive demonstrations that illustrate model behaviour,
-assumptions, and limitations for presentations, project meetings, or internal documentation.
+Users can generate figures or small interactive demonstrations that illustrate
+model behaviour, assumptions, and limitations for presentations, project
+meetings, or internal documentation.
 :::
 
 :::
 
-<div class="text-center small text-secondary vbl-footer-classic">
-  <div class="vbl-footer-line"></div>
-  <p class="mb-1">© 2025 Virtual Biophysical Lab · Minimal sandbox for biophysical model experiments.</p>
-  <p class="mb-0">
-    Source repository:
-    <a href="https://ccgcam.github.io/Virtual-Biophysical-Lab/" target="_blank" rel="noopener">
-      Virtual Biophysical Lab
-    </a>
-  </p>
-</div>
+---
 
+::: {.text-center .small .text-secondary .vbl-footer-classic}
+::: {.vbl-footer-line}
+:::
+© 2025 **Virtual Biophysical Lab** · Minimal sandbox for biophysical model
+experiments.  
+[Virtual Biophysical Lab](https://ccgcam.github.io/Virtual-Biophysical-Lab/)
+:::

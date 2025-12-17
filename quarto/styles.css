@@ -164,7 +164,12 @@ section{
   border-radius:var(--radius-xl);
   border:1px solid var(--border-subtle);
   box-shadow:var(--shadow-soft);
-  padding:1rem 1.1rem 1.2rem;
+  padding: 0.7rem 1.1rem 1.2rem;
+  
+}
+.vbl-card .pill-mini{
+  margin-top: -0.35rem;  /* sube el pill */
+  margin-bottom: 0.05rem;
 }
 
 .vbl-card h3{
@@ -178,19 +183,31 @@ section{
   text-align:left;
   text-justify:inter-word;
 }
+.pill-mini {
+ display: inline-flex;
+  align-items: center;
+  justify-content: center;   /* ensures true centering */
+ text-align: center; 
+  padding: 0.05rem 0.6rem;   /* symmetric vertical padding */
+  line-height: 1;            /* CRITICAL */
+   margin-bottom: 0.1rem;
+   margin-top: 0.4rem;
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 
-.pill-mini{
-  display:inline-flex;
-  align-items:center;
-  padding:.18rem .6rem;
-  border-radius:var(--radius-pill);
-  border:1px solid rgba(148,163,184,.7);
-  font-size:.7rem;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-  color:var(--text-muted);
-  margin-bottom:.4rem;
+  color: #e5e7eb;
+  border-radius: var(--radius-pill);
+
+  background: linear-gradient(
+    135deg,
+    rgba(56,189,248,0.18),
+    rgba(99,102,241,0.18)
+  );
+
+  border: 1px solid rgba(99,102,241,0.6);
 }
+
 
 ul, ol{
   margin-left:1.1rem;
@@ -292,6 +309,12 @@ li{margin-bottom:.2rem}
 
   color: #1f2937;
   font-size: 0.95rem;
+}
+
+.r-logo {
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 6px;
 }
 
 /* FOOTER */

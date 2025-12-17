@@ -3,47 +3,39 @@ title: "Getting started"
 format: html
 ---
 
-<div class="section-label">Section · Setup</div>
-<div class="section-title-strong">Getting started with the repository</div>
+::: {.section-label}
+Section · Setup
+:::
 
-<p class="section-intro">
-This section provides a minimal workflow to help you start using the Virtual Biophysical Lab
-repository for learning, teaching, or early-stage research prototyping.
-</p>
+::: {.section-title-strong}
+Getting started with the repository
+:::
 
-<ol>
-  <li>
-    Clone the repository locally or download it as a ZIP archive.
-  </li>
-  <li>
-    Open the <code>notebooks/</code> or <code>rtm/</code> directories in your preferred IDE
-    (e.g. RStudio, VS Code).
-  </li>
-  <li>
-    Run one of the introductory scripts and modify key parameters such as LAI, chlorophyll
-    content (Cab), or soil brightness.
-  </li>
-  <li>
-    Visualise the outputs and compare results across scenarios, stress levels, or sensor
-    configurations.
-  </li>
-</ol>
+::: {.section-intro}
+This section provides a minimal workflow to help you start using the
+Virtual Biophysical Lab repository for learning, teaching, or
+early-stage research prototyping.
+:::
 
+---
 
+1. Clone the repository locally or download it as a ZIP archive.
+2. Open the `notebooks/` or `rtm/` directories in your preferred IDE
+   (e.g. RStudio, VS Code).
+3. Run one of the introductory scripts and modify key parameters such as
+   LAI, chlorophyll content (Cab), or soil brightness.
+4. Visualise the outputs and compare results across scenarios, stress
+   levels, or sensor configurations.
 
-```bash
-# Example: clone this repo
-git clone https://github.com/CCGCAM/Virtual-Biophysical-Group.git
-cd Virtual-Biophysical-Group
-```
-  <div class="text-center small text-secondary vbl-footer-classic">
-  <div class="vbl-footer-line"></div>
-  <p class="mb-1">© 2025 Virtual Biophysical Lab · Minimal sandbox for biophysical model experiments.</p>
-  <p class="mb-0">
-    Source repository:
-    <a href="https://ccgcam.github.io/Virtual-Biophysical-Lab/" target="_blank" rel="noopener">
-      Virtual Biophysical Lab
-    </a>
-  </p>
-</div>
+---
+
+::: {.text-center .small .text-secondary .vbl-footer-classic}
+::: {.vbl-footer-line}
+:::
+
+© 2025 **Virtual Biophysical Lab** · Minimal sandbox for biophysical model
+experiments.  
+[Virtual Biophysical Lab](https://ccgcam.github.io/Virtual-Biophysical-Lab/)
+:::
+
 </section> 

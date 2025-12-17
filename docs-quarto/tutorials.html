@@ -161,7 +161,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="virtual-biophysical-lab" class="level2">
 <h2 class="anchored" data-anchor-id="virtual-biophysical-lab">Virtual Biophysical Lab</h2>
-<p>This section provides the practical learning layer of the Virtual Biophysical Lab. It gathers structured tutorials that translate the scientific concepts, models, and workflows developed in HYDRA-EO into reproducible, hands-on examples.</p>
+<p>This section provides the practical learning layer of the <strong>Virtual Biophysical Lab</strong>. It gathers structured tutorials that translate the scientific concepts, models, and workflows developed in <strong>HYDRA-EO</strong> into reproducible, hands-on examples.</p>
 <p>The tutorials are organised by core modelling packages used within the project, primarily <strong>ToolsRTM</strong> and <strong>SCOPEinR</strong>, and are delivered as executable notebooks and scripted workflows that can be directly run, modified, and reused.</p>
 <hr>
 </section>
@@ -169,13 +169,11 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="toolsrtm-package">ToolsRTM package</h2>
 <p>The ToolsRTM tutorials introduce the foundations of radiative transfer modelling and EO-based plant trait retrieval. They guide users through leaf- and canopy-level reflectance simulations, spectral sensitivity analysis and band selection, and the integration of radiative transfer models with Earth Observation data. Emphasis is placed on hybrid workflows that combine physically based models with machine-learning approaches.</p>
 <div class="vbl-card">
-<ul class="list-unstyled mt-3 mb-0">
-<li class="py-2 border-top">
-<strong> <a href="../notebooks/ToolsRTM.html" target="_blank" rel="noopener"> ToolsRTM tutorial notebook </a> </strong><br> <span class="text-secondary"> Leaf and canopy radiative transfer simulations, spectral sensitivity analysis, and hybrid RTM–ML workflows using the ToolsRTM package. </span>
-</li>
-<li class="py-2 border-top">
-<strong> <a href="../notebooks/getting_satellite_using_stac.html" target="_blank" rel="noopener"> Accessing satellite data using STAC </a> </strong><br> <span class="text-secondary"> Practical tutorial on accessing and visualising EO satellite data using STAC APIs, designed to support downstream RTM-based analyses. </span>
-</li>
+<ul>
+<li><p><a href="../notebooks/ToolsRTM.html"><strong>ToolsRTM tutorial notebook</strong></a><br>
+<em>Leaf and canopy radiative transfer simulations, spectral sensitivity analysis, and hybrid RTM–ML workflows using the ToolsRTM package.</em></p></li>
+<li><p><a href="../notebooks/getting_satellite_using_stac.html"><strong>Accessing satellite data using STAC</strong></a><br>
+<em>Practical tutorial on accessing and visualising EO satellite data using STAC APIs, designed to support downstream RTM-based analyses.</em></p></li>
 </ul>
 </div>
 <hr>
@@ -184,10 +182,9 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="scopeinr-package">SCOPEinR package</h2>
 <p>The SCOPE tutorials focus on the simulation of coupled energy balance, photosynthesis, and fluorescence processes at the canopy scale. They demonstrate how SIF and thermal signals can be interpreted in relation to underlying physiological processes, and how model outputs can be validated against field measurements and flux-tower observations.</p>
 <div class="vbl-card">
-<ul class="list-unstyled mt-3 mb-0">
-<li class="py-2 border-top">
-<strong> <a href="../notebooks/SCOPEinR.html" target="_blank" rel="noopener"> SCOPEinR tutorial notebook </a> </strong><br> <span class="text-secondary"> Simulation of coupled radiative transfer, energy balance, photosynthesis and fluorescence using the SCOPEinR framework. </span>
-</li>
+<ul>
+<li><a href="../notebooks/SCOPEinR.html"><strong>SCOPEinR tutorial notebook</strong></a><br>
+<em>Simulation of coupled radiative transfer, energy balance, photosynthesis and fluorescence using the SCOPEinR framework.</em></li>
 </ul>
 </div>
 <hr>
@@ -197,96 +194,42 @@ ul.task-list li input[type="checkbox"] {
 <p>These scripts provide reproducible, step-by-step examples that complement the notebook-based tutorials. They are organised by modelling framework and can be run independently or adapted for teaching and prototyping.</p>
 <div class="vbl-card">
 <div class="pill-mini">
-R · ToolsRTM / PROSAIL
+<p>R · ToolsRTM / PROSAIL</p>
 </div>
-<h3 class="anchored">
-<img src="../assets/logoR_white_1024.png" alt="R logo" style="height:20px; vertical-align:middle; margin-right:6px;"> ToolsRTM &amp; PROSAIL scripts
-</h3>
-<ul>
-  <li>
-    <strong>
-      <a href="../scripts/4-Sims-Inversion_PROSAIL.R" download="">
-        Inversion with PROSAIL
-      </a>
-    </strong>
-    — PROSAIL forward simulations and inversion examples.
-  </li>
-
-  <li>
-    <strong>
-      <a href="../scripts/4-Sims-Inversion_PROSAIL_satellite.R" download="">
-        Hybrid ML inversion with PROSAIL at Sentinel-2 and PRISMA
-      </a>
-    </strong>
-    — PROSAIL simulations adapted to satellite spectral configurations.
-  </li>
-</ul>
-
-<p class="section-intro">
-These scripts demonstrate leaf–canopy radiative transfer simulations, LUT generation, and inversion strategies using the ToolsRTM framework, including satellite-oriented workflows.
-</p>
+<section id="toolsrtm-prosail-scripts" class="level3">
+<h3 class="anchored" data-anchor-id="toolsrtm-prosail-scripts"><img src="../assets/logoR_white_512.png" class="r-logo img-fluid"> ToolsRTM &amp; PROSAIL scripts</h3>
+<p><a href="../scripts/4-Sims-Inversion_PROSAIL.R"><strong>Foward-Inversion approach</strong></a>&nbsp;: Foward mode using PROSAIL and an inversion example</p>
+<p><a href="../scripts/4-Sims-Inversion_PROSAIL_satellite.R"><strong>Hybrid ML inversion with PROSAIL at Sentinel-2 and PRISMA</strong></a>&nbsp;: PROSAIL simulations adapted to satellite spectral configurations.</p>
+<div class="section-intro">
+<p>These scripts demonstrate leaf–canopy radiative transfer simulations, LUT generation, and inversion strategies using the ToolsRTM framework, including satellite-oriented workflows.</p>
 </div>
-<p><br></p>
+</section>
+</div>
+<hr>
 <div class="vbl-card">
 <div class="pill-mini">
-R · SCOPEinR
+<p>R · SCOPEinR</p>
 </div>
-<h3 class="anchored">
-<img src="../assets/logoR_white_512.png" alt="R logo" style="height:20px; vertical-align:middle; margin-right:6px;"> SCOPEinR scripts
-</h3>
-<ul>
-  <li>
-    <strong>
-      <a href="../scripts/1-getSCOPE.R" download="">
-        Run with getSCOPE
-      </a>
-    </strong>
-    — Run a basic SCOPE simulation and extract core outputs.
-  </li>
-
-  <li>
-    <strong>
-      <a href="../scripts/1-getSCOPE-v3_withChunck.R" download="">
-        Run with getSCOPE using chunks
-      </a>
-    </strong>
-    — Chunk-based execution for large parameter spaces.
-  </li>
-
-  <li>
-    <strong>
-      <a href="../scripts/2-Explore_outputsSCOPE.R" download="">
-        Explore outputs from SCOPEinR
-      </a>
-    </strong>
-    — Visualisation and interpretation of SCOPE outputs.
-  </li>
-
-  <li>
-    <strong>
-      <a href="../scripts/3-Inversion.R" download="">
-        Hybrid ML approach using SCOPE LUT table
-      </a>
-    </strong>
-    — Simple inversion example using SCOPE simulations.
-  </li>
-</ul>
-
-<p class="section-intro">
-These scripts focus on coupled energy balance, photosynthesis, temperature, and fluorescence simulations, and are well suited for understanding SCOPE dynamics before moving to hybrid or inversion workflows.
-</p>
+<section id="scopeinr-scripts" class="level3">
+<h3 class="anchored" data-anchor-id="scopeinr-scripts"><img src="../assets/logoR_white_512.png" class="r-logo img-fluid"> SCOPEinR scripts</h3>
+<p><a href="../scripts/1-getSCOPE.R"><strong>Run with getSCOPE</strong></a>&nbsp;: Run a basic SCOPE simulation and extract core outputs.</p>
+<p><a href="../scripts/1-getSCOPE-v3_withChunck.R"><strong>Run with getSCOPE using chunks</strong></a><br>
+Chunk-based execution for large parameter spaces.</p>
+<p><a href="../scripts/2-Explore_outputsSCOPE.R"><strong>Explore outputs from SCOPEinR</strong></a>&nbsp;: Visualisation and interpretation of SCOPE outputs.</p>
+<p><a href="../scripts/3-Inversion.R"><strong>Hybrid ML approach using SCOPE LUT table</strong></a>&nbsp;:Simple inversion example using SCOPE simulations.</p>
+<div class="section-intro">
+<p>These scripts focus on coupled energy balance, photosynthesis, temperature, and fluorescence simulations, and are well suited for understanding SCOPE dynamics before moving to hybrid or inversion workflows.</p>
+</div>
+</section>
 </div>
 <hr>
 <div class="text-center small text-secondary vbl-footer-classic">
 <div class="vbl-footer-line">
 
 </div>
-<p class="mb-1">
-© 2025 Virtual Biophysical Lab · Minimal sandbox for biophysical model experiments.
-</p>
-<p class="mb-0">
-Source repository: <a href="https://ccgcam.github.io/Virtual-Biophysical-Lab/" target="_blank" rel="noopener"> Virtual Biophysical Lab </a>
-</p>
+<p>© 2025 <strong>Virtual Biophysical Lab</strong> · Minimal sandbox for biophysical model experiments.</p>
+<p>Source repository:<br>
+<a href="https://ccgcam.github.io/Virtual-Biophysical-Lab/">Virtual Biophysical Lab</a></p>
 </div>
 
 

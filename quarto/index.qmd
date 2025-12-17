@@ -4,85 +4,100 @@ format:
   html:
     toc: false
     embed-resources: true
-    include-after-body: _footer.html
 ---
 
-<div class="hero-card">
+::: {.hero-card}
 
-# HYDRA-EO Tutorials <span>· Hybrid ML &amp; RTM for crop stress</span>
+# HYDRA-EO Tutorials · Hybrid ML & RTM for crop stress
 
-<p class="hero-text">
-This tutorial site provides lightweight examples, scripts and notebooks that illustrate the main
-concepts of the HYDRA-EO project: hybrid machine learning, radiative transfer modelling and
-multi-sensor Earth Observation for crop stress, pests and disease monitoring.
-</p>
+::: {.hero-text}
+This tutorial site provides lightweight examples, scripts, and notebooks
+that illustrate the main concepts of the **HYDRA-EO** project: hybrid
+machine learning, radiative transfer modelling, and multi-sensor Earth
+Observation for crop stress, pests, and disease monitoring.
+:::
 
-<div class="hero-tags">
-  <div class="tag-pill">Hybrid ML &amp; RTMs</div>
-  <div class="tag-pill">Crop stress &amp; pests</div>
-  <div class="tag-pill">Hyperspectral &amp; thermal</div>
-  <div class="tag-pill">ESA EXPRO+ project</div>
-</div>
+::: {.hero-tags}
+::: {.tag-pill}
+Hybrid ML & RTMs
+:::
+::: {.tag-pill}
+Crop stress & pests
+:::
+::: {.tag-pill}
+Hyperspectral & thermal
+:::
+::: {.tag-pill}
+ESA EXPRO+ project
+:::
+:::
 
-</div>
+:::
 
-<div class="section-label">Section · Overview</div>
+---
+
+::: {.section-label}
+Section · Overview
+:::
 
 ## What are these tutorials?
 
-The HYDRA-EO tutorial platform mirrors the structure of the main HYDRA-EO project website, but in a lightweight scientific format.
-It provides a sandbox where users can interact with radiative transfer models, explore spectral simulations,
-test machine-learning workflows and understand how symptoms of crop stress emerge across spectral domains.
+The HYDRA-EO tutorial platform mirrors the structure of the main HYDRA-EO
+project website, but in a lightweight scientific format. It provides a
+sandbox where users can interact with radiative transfer models, explore
+spectral simulations, test machine-learning workflows, and understand
+how symptoms of crop stress emerge across spectral domains.
+
+---
 
 ::: {.card-grid}
 
 ::: {.vbl-card}
-<div class="pill-mini">RTMs</div>
+::: {.pill-mini}
+RTMs
+:::
 
 ### Radiative transfer simulations
 
-Hands-on examples using **ToolsRTM** (PROSAIL, INFORM, FLUSPECT, SPART, MARMIT)
-and **SCOPEinR** for coupled radiative transfer, energy balance and fluorescence.
+Hands-on examples using **ToolsRTM** (PROSAIL, INFORM, FLUSPECT, SPART,
+MARMIT) and **SCOPEinR** for coupled radiative transfer, energy balance,
+and fluorescence.
 :::
 
 ::: {.vbl-card}
-<div class="pill-mini">Hybrid ML</div>
+::: {.pill-mini}
+Hybrid ML
+:::
 
 ### Trait-based machine learning
 
-Practical workflows showing how synthetic RTM libraries can support supervised learning,
-stress differentiation and band/feature selection for ESA missions.
+Practical workflows showing how synthetic RTM libraries can support
+supervised learning, stress differentiation, and band/feature selection
+for ESA missions.
 :::
 
 ::: {.vbl-card}
-<div class="pill-mini">EO</div>
+::: {.pill-mini}
+EO
+:::
 
 ### Multi-sensor Earth Observation
 
-Use cases combining UAV hyperspectral, thermal, airborne HyPlant, and satellite data
-(Sentinel-2, PRISMA, EnMAP, FLEX-like SIF) to explore scaling from leaf to landscape.
+Use cases combining UAV hyperspectral, thermal, airborne HyPlant, and
+satellite data (Sentinel-2, PRISMA, EnMAP, FLEX-like SIF) to explore
+scaling from leaf to landscape.
 :::
 
 :::
 
-<div class="text-center small text-secondary vbl-footer-classic">
+---
 
-<div class="vbl-footer-line"></div>
+::: {.text-center .small .text-secondary .vbl-footer-classic}
+::: {.vbl-footer-line}
+:::
 
-<p class="mb-1">© 2026 HYDRA-EO.</p>
+© 2025 **Virtual Biophysical Lab** · Minimal sandbox for biophysical model
+experiments.  
+[Virtual Biophysical Lab](https://ccgcam.github.io/Virtual-Biophysical-Lab/)
+:::
 
-<p class="mb-2">
-HYDRA-EO is funded by the European Space Agency (ESA) under the EXPRO+ Tender
-“Crop Multiple Stressors, Pests and Diseases”
-</p>
-
-<p class="mb-3">Action 1-12684.</p>
-
-<p class="mb-4">
-Source repository:
-<a href="https://ccgcam.github.io/HydraEO/" target="_blank" rel="noopener">
-Hydra-EO pipeline
-</a>
-</p>
-
-</div>

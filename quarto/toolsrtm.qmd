@@ -1,87 +1,90 @@
 ---
 title: "ToolsRTM"
+editor: 
+  markdown: 
+    wrap: 72
 ---
 
-<section id="toolsrtm">
+::: section-label
+Section · Simulation tool
+:::
 
-<div class="section-label">Section · Simulation tool</div>
-<div class="section-title-strong">ToolsRTM</div>
+::: section-title-strong
+ToolsRTM
+:::
 
-<p class="section-intro">
-The Virtual Biophysical Lab is designed to connect with existing R toolboxes for radiative transfer
-modelling. The <strong>ToolsRTM</strong> package provides a comprehensive suite of models for simulating
-leaf and canopy reflectance, including soil and atmosphere components.
-</p>
+::: section-intro
+The Virtual Biophysical Lab is designed to connect with existing R
+toolboxes for radiative transfer modelling. The **ToolsRTM** package
+provides a comprehensive suite of models for simulating leaf and canopy
+reflectance, including soil and atmosphere components.
+:::
 
-<div class="vbl-card">
-  <div class="pill-mini">ToolsRTM</div>
-  <h3>Leaf &amp; canopy radiative transfer</h3>
+------------------------------------------------------------------------
 
-  <p>
-    <strong>ToolsRTM</strong> is an R package designed to perform detailed simulations of leaf and 
-    canopy reflectance using a wide suite of radiative transfer (RT) models. It operates across 
-    multiple satellite spectral configurations and enables high-fidelity analysis of vegetation 
-    biophysical and biochemical traits.
-  </p>
+::::: vbl-card
+::: pill-mini
+R · ToolsRTM
+:::
 
-  <p>
-    At the <em>canopy level</em>, ToolsRTM includes models such as <strong>INFORM</strong>, 
-    <strong>fourSAIL</strong>, and <strong>fourSAIL2</strong>, enabling the simulation of BRDF-sensitive 
-    canopy reflectance under variable structural and illumination conditions.
-  </p>
+### Leaf & canopy radiative transfer
 
-  <p>
-    At the <em>leaf level</em>, the package integrates models such as <strong>PROSPECT</strong>, 
-    <strong>Liberty</strong>, and <strong>FLUSPECT (B–Cx)</strong>, enabling simulation of pigment content,
-    water, and dry matter effects on reflectance and transmittance.
-  </p>
+**ToolsRTM** is an R package designed to perform detailed simulations of
+leaf and canopy reflectance using a wide suite of radiative transfer
+(RT) models. It operates across multiple satellite spectral
+configurations and enables high-fidelity analysis of vegetation
+biophysical and biochemical traits.
 
-  <p>
-    ToolsRTM also incorporates the <strong>SPART</strong> model for TOA simulations, integrating:
-  </p>
+At the *canopy level*, ToolsRTM includes models such as **INFORM**,
+**fourSAIL**, and **fourSAIL2**, enabling the simulation of
+BRDF-sensitive canopy reflectance under variable structural and
+illumination conditions.
 
-  <ul>
-    <li><strong>BSM</strong> – soil reflectance</li>
-    <li><strong>PROSAIL</strong> – canopy reflectance</li>
-    <li><strong>SMAC</strong> – atmospheric radiative transfer</li>
-  </ul>
+At the *leaf level*, the package integrates models such as **PROSPECT**,
+**Liberty**, and **FLUSPECT (B–Cx)**, enabling simulation of pigment
+content, water, and dry-matter effects on reflectance and transmittance.
 
-  <p>
-    The package includes the <strong>MARMIT</strong> model for bare-soil reflectance (400–2500 nm),
-    implemented via <code>get.marmit1</code> and <code>get.marmit2</code>.
-  </p>
+ToolsRTM also incorporates the **SPART** model for top-of-atmosphere
+(TOA) simulations, integrating:
 
-  <p>
-    ToolsRTM provides access to eight reference soil and vegetation databases 
-    used for model parameterisation and validation.
-  </p>
+-   **BSM** — soil reflectance\
+-   **PROSAIL** — canopy reflectance\
+-   **SMAC** — atmospheric radiative transfer
 
-  <p style="margin-top:.6rem;">
-    GitLab repository:<br>
-    <a href="https://gitlab.com/caminoccg/toolsrtm" target="_blank">ToolsRTM package</a>
-  </p>
-</div>
-<br>
-<div class="vbl-card">
-  <div class="pill-mini">R · ToolsRTM</div>
-  <h3>Shiny application and LUT example</h3>
+The package includes the **MARMIT** model for bare-soil reflectance
+(400–2500 nm), implemented via `get.marmit1` and `get.marmit2`.
 
-  <p class="section-intro">
-  Example R code showing how to launch the RT simulators and generate a small PROSAIL LUT
-  using <code>ToolsRTM</code>.
-  </p>
+ToolsRTM provides access to eight reference soil and vegetation
+databases used for model parameterisation and validation.
 
-</div>
+::: section-intro
+GitLab repository:\
+[ToolsRTM package](https://gitlab.com/caminoccg/toolsrtm)
+:::
+:::::
 
-  <div class="text-center small text-secondary vbl-footer-classic">
-  <div class="vbl-footer-line"></div>
-  <p class="mb-1">© 2025 Virtual Biophysical Lab · Minimal sandbox for biophysical model experiments.</p>
-  <p class="mb-0">
-    Source repository:
-    <a href="https://ccgcam.github.io/Virtual-Biophysical-Lab/" target="_blank" rel="noopener">
-      Virtual Biophysical Lab
-    </a>
-  </p>
-</div>
-</section>
+------------------------------------------------------------------------
 
+::::: vbl-card
+::: pill-mini
+R · ShinyApp
+:::
+
+### Shiny application and LUT example
+
+::: section-intro
+Example R code showing how to launch the RT simulators and generate a
+small PROSAIL lookup table (LUT) using **ToolsRTM**.
+:::
+:::::
+
+------------------------------------------------------------------------
+
+:::: {.text-center .small .text-secondary .vbl-footer-classic}
+::: vbl-footer-line
+:::
+
+© 2025 **Virtual Biophysical Lab** · Minimal sandbox for biophysical model
+experiments.  
+[Virtual Biophysical Lab](https://ccgcam.github.io/Virtual-Biophysical-Lab/)
+::::

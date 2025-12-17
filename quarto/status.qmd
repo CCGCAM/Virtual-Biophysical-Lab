@@ -3,33 +3,33 @@ title: "Status"
 format: html
 ---
 
-<div class="section-label">Section · Status</div>
+::: {.section-label}
+Section · Status
+:::
 
-<div class="status-badge">
-  <span>●</span><span>Early prototype / sandbox</span>
-</div>
+::: {.status-badge}
+● Early prototype / sandbox
+:::
 
-<p class="section-intro">
-The Virtual Biophysical Lab is currently in an early prototype phase. Its primary objective is to
+::: {.section-intro}
+The **Virtual Biophysical Lab** is currently in an early prototype phase. Its primary objective is to
 provide a clean, low-friction environment for testing methodological ideas, hosting small and
 reproducible examples for students and collaborators, and preparing content that can later be
 migrated into more complete tools or project-specific repositories.
-</p>
+:::
 
-<p class="section-intro">
-At this stage, the emphasis is on clarity, reproducibility, and pedagogical value rather than on
-operational completeness. Interfaces, examples, and documentation may evolve rapidly as concepts
+::: {.section-intro}
+At this stage, the emphasis is on **clarity**, **reproducibility**, and **pedagogical value** rather than
+on operational completeness. Interfaces, examples, and documentation may evolve rapidly as concepts
 are validated, refined, and consolidated.
-</p>
+:::
 
-<div class="text-center small text-secondary vbl-footer-classic">
-  <div class="vbl-footer-line"></div>
-  <p class="mb-1">© 2025 Virtual Biophysical Lab · Minimal sandbox for biophysical model experiments.</p>
-  <p class="mb-0">
-    Source repository:
-    <a href="https://ccgcam.github.io/Virtual-Biophysical-Lab/" target="_blank" rel="noopener">
-      Virtual Biophysical Lab
-    </a>
-  </p>
-</div>
+::: {.text-center .small .text-secondary .vbl-footer-classic}
+::: {.vbl-footer-line}
+:::
+
+© 2025 **Virtual Biophysical Lab** · Minimal sandbox for biophysical model
+experiments.  
+[Virtual Biophysical Lab](https://ccgcam.github.io/Virtual-Biophysical-Lab/)
+:::
 

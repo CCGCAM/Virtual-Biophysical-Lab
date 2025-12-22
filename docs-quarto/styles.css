@@ -350,3 +350,16 @@ li{margin-bottom:.2rem}
   text-decoration: underline;
   color: #ffffff;
 }
+
+/* Mobile: do not show Quarto sidebar as page content */
+@media (max-width: 991.98px) {
+  #quarto-sidebar,
+  .sidebar,
+  .sidebar-navigation,
+  .sidebar-search {
+    display: none !important;
+  }
+  #quarto-content, main {
+    margin-left: 0 !important;
+  }
+}
